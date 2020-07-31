@@ -1,0 +1,47 @@
+.header {
+  background-color: $basic-white;
+  font-family: $special-text;
+}
+
+.header__item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 23px;
+}
+
+.header__logo {
+  flex-basis: 70%;
+}
+
+.header__button {
+  flex-basis: 30%;
+  background-color: transparent;
+  border: none;
+  display: block;
+  position: relative;
+  height: auto;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: inline-block;
+    top: 55%;
+    right: 0;
+    content: "";
+    height: 5%;
+    width: 30%;
+    background-color: $basic-black;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}

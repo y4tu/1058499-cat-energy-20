@@ -1,1 +1,26 @@
-// Начните писать стили здесь
+//GLOBAL
+@import "../css/normalize.css";
+@import "fonts";
+@import "variables";
+@import "drop";
+@import "button";
+@import "visually-hidden";
+
+//PAGE
+@import "page";
+
+//HEADER
+
+@import "header";
+@import "nav";
+
+//MAIN
+@import "main";
+@import "example";
+@import "promo";
+@import "programs";
+@import "about";
+
+//FOOTER
+
+@import "footer";
