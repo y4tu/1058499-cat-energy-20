@@ -1,0 +1,11 @@
+.socials {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  padding-left: 73px;
+  padding-right: 77px;
+  border-top: 1px solid $special-gray-4;
+  border-bottom: 1px solid $special-gray-4;
+}

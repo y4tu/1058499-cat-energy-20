@@ -1,0 +1,14 @@
+.logo {
+}
+
+.logo__link {
+  display: block;
+  width: 100%;
+
+  &--footer {
+    padding-top: 39px;
+    padding-bottom: 32px;
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+}

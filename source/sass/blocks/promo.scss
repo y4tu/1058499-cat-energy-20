@@ -1,7 +1,5 @@
 .promo {
   color: $basic-white;
-  display: grid;
-  grid-template-rows: min-content min-content;
   padding-bottom: 22px;
 }
 
@@ -19,6 +17,7 @@
 }
 
 .promo__title {
+  @include text-reset;
   font-family: $special-text;
   font-size: 36px;
   line-height: 36px;
@@ -27,6 +26,7 @@
 }
 
 .promo__slogan {
+  @include text-reset;
   font-family: $special-text;
   font-size: 14px;
   line-height: 14px;

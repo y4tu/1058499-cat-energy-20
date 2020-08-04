@@ -1,26 +1,38 @@
 //GLOBAL
-@import "../css/normalize.css";
-@import "fonts";
-@import "variables";
-@import "drop";
-@import "button";
-@import "visually-hidden";
+@import "blocks/normalize";
+@import "blocks/variables";
+@import "blocks/fonts";
+@import "blocks/global";
+@import "blocks/mixin";
+@import "blocks/container";
+@import "blocks/button";
 
 //PAGE
-@import "page";
+@import "blocks/page";
 
 //HEADER
 
-@import "header";
-@import "nav";
+@import "blocks/header";
+@import "blocks/nav";
 
 //MAIN
-@import "main";
-@import "example";
-@import "promo";
-@import "programs";
-@import "about";
+@import "blocks/main";
+@import "blocks/example";
+@import "blocks/promo";
+@import "blocks/programs";
+@import "blocks/about";
+@import "blocks/stats";
+@import "blocks/catalog";
+@import "blocks/card";
+@import "blocks/additional";
+@import "blocks/gift";
+@import "blocks/contacts";
+@import "blocks/logo";
+@import "blocks/socials";
+@import "blocks/form";
+
+
 
 //FOOTER
 
-@import "footer";
+@import "blocks/footer";

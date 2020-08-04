@@ -9,8 +9,6 @@
   width: 100%;
   padding-top: 12px;
   padding-bottom: 17px;
-  padding-left: 20px;
-  padding-right: 23px;
 }
 
 .header__logo {
@@ -23,7 +21,6 @@
   border: none;
   display: block;
   position: relative;
-  height: auto;
 
   &::before,
   &::after {

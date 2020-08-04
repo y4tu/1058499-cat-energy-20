@@ -1,6 +1,4 @@
 .programs {
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 27px;
 }
 
@@ -16,6 +14,7 @@
 }
 
 .programs__title {
+  @include text-reset;
   display: block;
   position: relative;
   font-family: $special-text;
@@ -23,16 +22,17 @@
   line-height: 37px;
   font-weight: normal;
   text-transform: uppercase;
-  padding-left: 22%;
-  padding-top: 15%;
+  padding-left: 69px;
+  padding-top: 30px;
   padding-bottom: 15%;
+
   &::before {
     content: "";
     background-color: $basic-green;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
-    top: 30%;
+    top: 24px;
     left: 0;
     min-width: 50px;
     min-height: 50px;
@@ -40,6 +40,7 @@
 }
 
 .programs__title--slim {
+
   &::after {
     content: "";
     background-image: url("/img/icon-cat-slim.svg");
@@ -47,14 +48,15 @@
     background-position: center;
     display: inline-block;
     position: absolute;
-    top: 27%;
-    left: 3%;
+    top: 21px;
+    left: 8px;
     min-width: 36px;
     min-height: 50px;
   }
 }
 
 .programs__title--pro {
+
   &::after {
     content: "";
     background-image: url("/img/icon-cat-pro.svg");
@@ -62,14 +64,15 @@
     background-position: center;
     display: inline-block;
     position: absolute;
-    top: 27%;
+    top: 35px;
     left: -5%;
-    min-width: 67px;
-    min-height: 50px;
+    width: 67px;
+    height: 50px;
   }
 }
 
 .programs__text {
+  @include text-reset;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
@@ -91,14 +94,15 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $basic-black;
+
   &::after {
     content: "";
     background-image: url("/img/icon-right-arrow-verylong.svg");
     background-repeat: no-repeat;
     display: block;
     position: absolute;
-    top: 35%;
-    right: 40%;
+    top: 17px;
+    left: 102px;
     min-width: 32px;
     min-height: 10px;
   }

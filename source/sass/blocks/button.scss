@@ -1,0 +1,25 @@
+.button {
+  padding: 10px 40px;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: $special-text;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  max-height: 40px;
+
+  &--primary {
+    background-color: $basic-green;
+  }
+
+  &--secondary {
+    background-color: $basic-gray;
+  }
+
+  &--toggle {
+    padding: 0;
+  }
+}
+
