@@ -1,0 +1,23 @@
+.example {
+  background-color: $special-gray-3;
+}
+
+.example__title {
+  @include text-reset;
+  font-family: $special-text;
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 33px;
+}
+
+.example__text {
+  @include text-reset;
+  font-style: $basic-text;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 25px;
+}
+
+.example__stats {
+
+}

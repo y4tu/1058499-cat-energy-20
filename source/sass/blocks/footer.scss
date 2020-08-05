@@ -1,0 +1,43 @@
+.footer {
+  background-color: $basic-gray;
+}
+
+.footer__contacts {
+width: 100%
+}
+
+.footer__logo {
+  width: 100%;
+}
+
+.footer__socials {
+  width: 100%;
+}
+
+.footer__developed {
+  width: 100%;
+}
+
+.footer__link {
+  @include text-reset;
+  display: block;
+  position: relative;
+  padding: 22px 0;
+  font-family: $basic-text;
+  font-size: 16px;
+  color: $special-dark-gray;
+
+  &::after {
+    position: absolute;
+    display: inline-block;
+    top: 22px;
+    right: 0;
+    content: "";
+    height: 30px;
+    width: 34px;
+    background-image: url("/img/htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

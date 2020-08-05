@@ -1,0 +1,17 @@
+.catalog {
+  padding-top: 27px;
+}
+
+.catalog__title {
+  @include text-reset;
+  font-family: $special-text;
+  font-size: 36px;
+  line-height: 36px;
+  padding-top: 27px;
+  padding-bottom: 41px;
+}
+
+.catalog__cards {
+  display: grid;
+  grid-template-rows: 1fr;
+}

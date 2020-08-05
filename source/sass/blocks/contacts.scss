@@ -1,0 +1,25 @@
+.contacts {
+  display: flex;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 22px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.contacts__title {
+  @include text-reset;
+  flex-basis: 50%;
+  font-family: $special-text;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  @include text-reset;
+  flex-basis: 50%;
+  font-family: $basic-text;
+  font-size: 14px;
+  line-height: 20px;
+}

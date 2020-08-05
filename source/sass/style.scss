@@ -1,1 +1,38 @@
-// Начните писать стили здесь
+//GLOBAL
+@import "blocks/normalize";
+@import "blocks/variables";
+@import "blocks/fonts";
+@import "blocks/global";
+@import "blocks/mixin";
+@import "blocks/container";
+@import "blocks/button";
+
+//PAGE
+@import "blocks/page";
+
+//HEADER
+
+@import "blocks/header";
+@import "blocks/nav";
+
+//MAIN
+@import "blocks/main";
+@import "blocks/example";
+@import "blocks/promo";
+@import "blocks/programs";
+@import "blocks/about";
+@import "blocks/stats";
+@import "blocks/catalog";
+@import "blocks/card";
+@import "blocks/additional";
+@import "blocks/gift";
+@import "blocks/contacts";
+@import "blocks/logo";
+@import "blocks/socials";
+@import "blocks/form";
+
+
+
+//FOOTER
+
+@import "blocks/footer";

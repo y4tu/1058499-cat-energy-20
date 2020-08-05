@@ -1,0 +1,35 @@
+.stats {
+  @include text-reset;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.stats__item {
+  font-family: $special-text;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  & .stats__desc {
+    margin: 0;
+    font-family: $basic-text;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: none;
+  }
+
+  &:nth-child(2n+2) {
+    margin-left: 31px;
+  }
+
+  &:nth-child(2n+3),
+  &:nth-child(2n+3) .stats__desc {
+    margin: 0;
+    font-family: $special-text;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}
