@@ -8,7 +8,8 @@
 }
 
 .contacts__title {
-  @include text-reset;
+  margin: 0;
+font-weight: normal;
   flex-basis: 50%;
   font-family: $special-text;
   font-size: 16px;
@@ -17,7 +18,7 @@
 }
 
 .contacts__text {
-  @include text-reset;
+  margin: 0;
   flex-basis: 50%;
   font-family: $basic-text;
   font-size: 14px;

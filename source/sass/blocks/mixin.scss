@@ -4,12 +4,10 @@
   list-style: none;
 }
 
-@mixin text-reset {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-  text-transform: none;
-  text-decoration: none;
+
+@mixin font ($fsz: 14px, $lh: 18px) {
+  $fsz: font-size;
+  $lh: line-height;
 }
 
 @mixin fieldset-reset {

@@ -1,11 +1,26 @@
 .card {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 320px;
   min-height: 208px;
   border-top: 1px solid $basic-gray;
   padding-top: 19px;
   padding-bottom: 24px;
+
+  @media (#{$screen-tablet}) {
+    flex-direction: column;
+    width: 324px;
+    min-height: 430px;
+    display: block;
+    border: none;
+    padding: 0;
+    background-color: $basic-gray;
+
+    &:last-child {
+      background-color: transparent;
+      border: 2px solid $basic-gray;
+    }
+  }
 
   &:last-child {
     border-bottom: 1px solid $basic-gray;
@@ -18,10 +33,23 @@
   align-items: center;
   flex-basis: 50%;
 
+  @media (#{$screen-tablet}) {
+    min-width: 168px;
+    min-height: 200px;
+    margin-top: -73px;
+    margin-bottom: 34px;
+  }
 }
 
 .card__content {
   flex-basis: 50%;
+
+  @media (#{$screen-tablet}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 33px;
+  }
 
   &--more {
     flex-basis: 100%;
@@ -34,36 +62,64 @@
   justify-content: center;
   align-items: center;
   flex-basis: 100%;
+
+  &--more {
+
+  }
 }
 
 .card__title {
-  @include text-reset;
+  margin: 0;
+  font-weight: normal;
   font-family: $special-text;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   max-width: 72px;
 
+  @media (#{$screen-tablet}) {
+    max-width: 110px;
+    text-align: center;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   &--more {
     position: relative;
     max-width: 100%;
     padding-top: 60px;
 
+    @media (#{$screen-tablet}) {
+      padding-top: 161px;
+      max-width: 134px;
+    }
+
     &::before {
       display: block;
       position: absolute;
       top: 7px;
-      left: 125px;
+      left: 145px;
       content: "";
       background-image: url("/img/icon-plus-mobile.svg");
+      background-repeat: no-repeat;
       width: 30px;
       height: 30px;
+
+      @media (#{$screen-tablet}) {
+        top: 45px;
+        left: 40px;
+        background-image: url("/img/icon-plus.svg");
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 }
 
 .card__list {
-  @include text-reset;
+  margin: 0;
   font-family: $basic-text;
   font-size: 12px;
   line-height: 16px;
@@ -75,10 +131,24 @@
 }
 
 .card__text {
-  @include text-reset;
+  margin: 0;
+
+  @media (#{$screen-tablet}) {
+    font-family: $basic-text;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .card__item {
   display: flex;
   justify-content: space-between;
+
+  @media (#{$screen-tablet}) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid $basic-gray;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }

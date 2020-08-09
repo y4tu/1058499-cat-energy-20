@@ -3,7 +3,8 @@
 }
 
 .catalog__title {
-  @include text-reset;
+  margin: 0;
+  font-weight: normal;
   font-family: $special-text;
   font-size: 36px;
   line-height: 36px;
@@ -12,6 +13,15 @@
 }
 
 .catalog__cards {
-  display: grid;
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (#{$screen-tablet}) {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-column-gap: 60px;
+    grid-row-gap: 141px;
+    justify-content: center;
+  }
 }

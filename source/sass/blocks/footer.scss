@@ -3,7 +3,7 @@
 }
 
 .footer__contacts {
-width: 100%
+  width: 100%
 }
 
 .footer__logo {
@@ -19,7 +19,7 @@ width: 100%
 }
 
 .footer__link {
-  @include text-reset;
+  margin: 0;
   display: block;
   position: relative;
   padding: 22px 0;

@@ -1,6 +1,12 @@
 .header {
   background-color: $basic-white;
   font-family: $special-text;
+
+  @media (#{$screen-tablet}) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
 }
 
 .header__item {
@@ -9,10 +15,22 @@
   width: 100%;
   padding-top: 12px;
   padding-bottom: 17px;
+
+  @media (#{$screen-tablet}) {
+    width: 174px;
+    height: auto;
+    flex-basis: 10%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .header__logo {
   flex-basis: 70%;
+
+  @media (#{$screen-tablet}) {
+    flex-basis: 100%;
+  }
 }
 
 .header__button {
@@ -21,6 +39,20 @@
   border: none;
   display: block;
   position: relative;
+
+  @media (#{$screen-tablet}) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    display: none;
+  }
 
   &::before,
   &::after {

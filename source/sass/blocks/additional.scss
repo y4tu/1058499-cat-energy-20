@@ -1,5 +1,6 @@
 .additional__title {
-  @include text-reset;
+  margin: 0;
+font-weight: normal;
   font-family: $special-text;
   font-size: 24px;
   line-height: 24px;
@@ -31,7 +32,8 @@
 }
 
 .additional__subtitle {
-  @include text-reset;
+  margin: 0;
+font-weight: normal;
   flex-basis: 100%;
   font-family: $special-text;
   font-size: 16px;
