@@ -6,8 +6,8 @@
 
 
 @mixin font ($fsz: 14px, $lh: 18px) {
-  $fsz: font-size;
-  $lh: line-height;
+  font-size: $fsz;
+  line-height: $lh;
 }
 
 @mixin fieldset-reset {

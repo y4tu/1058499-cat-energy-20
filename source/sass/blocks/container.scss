@@ -4,12 +4,14 @@
   padding-right: 20px;
 
   @media (#{$screen-tablet}) {
-    width: auto;
+    width: 100%;
     padding-left: 30px;
     padding-right: 30px;
   }
 
   @media (#{$screen-desktop}) {
-
+    width: 100%;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }

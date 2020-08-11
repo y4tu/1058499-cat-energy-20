@@ -1,36 +1,79 @@
 .gift {
   width: 100%;
   min-height: 289px;
-  background-image: url("/img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  display: flex;
-  justify-content: center;
+  padding-top: 39px;
+  padding-bottom: 35px;
+  color: $basic-white;
+
+  @media (#{$screen-tablet}) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  @media (#{$screen-tablet}) {
+    width: 245px;
+  }
 }
 
 .gift__item {
-  padding-top: 186px;
+  padding-top: 58px;
+  padding-bottom: 43px;
   position: relative;
-  width: 161px;
+  width: 100%;
+  background-image: url("/img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
 
-  &::before {
-    position: absolute;
-    display: inline-block;
-    top: 58px;
-    left: 40px;
-    content: "";
-    height: 78px;
-    width: 72px;
-    background-image: url("/img/icon-gift.svg");
-    background-repeat: no-repeat;
+  @media (#{$screen-tablet}) {
+    background-image: url("/img/gift-photo-tablet@1x.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.gift__picture {
+  margin: 0 auto;
+  margin-bottom: 48px;
+  width: 57px;
+  height: 61px;
+
+  @media (#{$screen-tablet}) {
+    margin-top: 64px;
+    margin-bottom: 74px;
+    margin-left: 89px;
+  }
+  }
+
+.gift__svg {
+  fill: $basic-white;
+
+  @media (#{$screen-tablet}) {
+    width: 58px;
+    height: 63px;
+  }
+}
+
+.gift__text-wrapper {
+  display: block;
+  @media (#{$screen-tablet}) {
+    width: 161px;
+    margin-right: 124px;
   }
 }
 
 .gift__text {
-  margin: 0;
+  width: 161px;
+  margin: 0 auto;
   font-family: $basic-text;
-  font-size: 16px;
-  line-height: 20px;
+  @include font (16px, 20px);
   text-align: center;
+
+  @media (#{$screen-tablet}) {
+    text-align: start;
+  }
 }

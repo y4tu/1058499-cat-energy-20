@@ -1,6 +1,7 @@
 .contacts {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-top: 28px;
   padding-bottom: 22px;
   padding-left: 19px;
@@ -8,19 +9,39 @@
 }
 
 .contacts__title {
+  @include font (16px, 18px);
   margin: 0;
-font-weight: normal;
-  flex-basis: 50%;
+  font-weight: normal;
   font-family: $special-text;
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
+  max-width: 140px;
+
+  @media (#{$screen-tablet}) {
+    @include font (20px, 22px);
+    max-width: 171px;
+    margin-left: 41px;
+  }
 }
 
 .contacts__text {
+  @include font (14px, 20px);
   margin: 0;
-  flex-basis: 50%;
   font-family: $basic-text;
-  font-size: 14px;
-  line-height: 20px;
+  max-width: 140px;
+
+  @media (#{$screen-tablet}) {
+    @include font (16px, 20px);
+    max-width: 159px;
+    margin-right: 42px;
+    text-align: end;
+  }
+}
+
+.contacts__address {
+
+  @media (#{$screen-tablet}) {
+    display: block;
+    max-width: 159px;
+    padding-bottom: 20px;
+  }
 }
