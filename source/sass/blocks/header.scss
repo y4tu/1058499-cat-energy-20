@@ -7,6 +7,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
@@ -14,25 +16,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin: 0 20px;
-  margin-top: 12px;
-  margin-bottom: 17px;
+  padding: 0 20px;
+  padding-top: 12px;
+  padding-bottom: 17px;
+  margin: 0 -20px;
 
   @media (#{$screen-tablet}) {
-    width: 174px;
+    margin: 0;
+    padding: 0;
+    width: 190px;
     height: auto;
-    margin: 0 30px;
-    margin-top: 25px;
-    margin-bottom: 25px;
   }
 
   @media (#{$screen-desktop}) {
+    margin: 0;
+    padding: 0;
     width: 202px;
     height: auto;
-    margin: 0 110px;
-    margin-top: 25px;
-    margin-bottom: 25px;
   }
 }
 

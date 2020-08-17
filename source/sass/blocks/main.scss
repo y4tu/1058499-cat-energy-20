@@ -1,3 +1,11 @@
 .main {
   background-color: $basic-white;
+
+  @media (#{$screen-tablet}) {
+    padding-top: 40px;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding-top: 49px;
+  }
 }

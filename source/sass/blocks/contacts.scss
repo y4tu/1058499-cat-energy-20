@@ -6,6 +6,16 @@
   padding-bottom: 22px;
   padding-left: 19px;
   padding-right: 19px;
+
+  @media (#{$screen-desktop}) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    height: 201px;
+    padding: 62px 89px 51px 76px;
+    background-color: $basic-white;
+  }
 }
 
 .contacts__title {
