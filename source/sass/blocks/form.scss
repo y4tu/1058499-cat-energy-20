@@ -29,6 +29,15 @@
   @media (#{$screen-tablet}) {
     @include font (20px, 30px);
     margin-bottom: 66px;
+    width: 323px;
+  }
+}
+
+.form__group {
+  @media (#{$screen-desktop}) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 
@@ -41,13 +50,35 @@
     border-bottom: 1px solid $basic-gray;
     padding: 25px 20px;
     margin: 0 -20px;
+
+    @media (#{$screen-tablet}) {
+      border: 1px solid $special-gray-6;
+      width: 100%;
+      margin: 0;
+    }
+
+    @media (#{$screen-desktop}) {
+      flex-basis: 50%;
+      padding: 25px 28px;
+    }
   }
 
   &--cat-data {
     padding-top: 0;
+    padding-bottom: 0;
+
+    @media (#{$screen-tablet}) {
+      margin-bottom: 72px;
+    }
+
+    @media (#{$screen-desktop}) {
+      flex-basis: 50%;
+      margin: 0;
+      margin-right: 80px;
+    }
   }
 
-  &:last-child {
+  &--button {
     padding-top: 9px;
   }
 }
@@ -67,10 +98,23 @@
   &--radio,
   &--checkbox {
     justify-content: start;
+
+    @media (#{$screen-tablet}) {
+      @include font (20px, 30px);
+      margin-bottom: 35px;
+    }
+
+    @media (#{$screen-desktop}) {
+      margin-bottom: 50px;
+    }
   }
 }
 
 .form__input {
+  @include font (16px, 18px);
+  font-family: $special-text;
+  text-transform: uppercase;
+  color: $special-dark-gray;
   width: 100%;
   min-width: 172px;
   min-height: 45px;
@@ -90,6 +134,10 @@
       border-color: $special-dark-gray;
     }
   }
+
+  @media (#{$screen-tablet}) {
+    @include font (20px, 30px);
+  }
 }
 
 .form__label {
@@ -104,12 +152,21 @@
     padding-left: 46px;
     position: relative;
 
+    @media (#{$screen-tablet}) {
+      padding-left: 68px;
+    }
+
     &::before {
       content: "";
       display: inline-block;
       position: absolute;
       top: -5px;
       left: 0;
+
+      @media (#{$screen-tablet}) {
+        top: -12px;
+        left: 8px;
+      }
     }
   }
 
@@ -119,6 +176,11 @@
       border: 1px solid $special-gray;
       width: 30px;
       height: 30px;
+
+      @media (#{$screen-tablet}) {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     &::after {
@@ -174,6 +236,10 @@
 
   &--contacts {
     margin-top: 30px;
+
+    @media (#{$screen-desktop}) {
+      margin-top: 15px;
+    }
   }
 }
 
