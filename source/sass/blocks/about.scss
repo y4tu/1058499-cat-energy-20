@@ -4,7 +4,8 @@
 }
 
 .about__title {
-  @include text-reset;
+  margin: 0;
+font-weight: normal;
   font-family: $special-text;
   font-size: 36px;
   line-height: 40px;
@@ -20,6 +21,25 @@
   font-weight: normal;
   display: block;
   min-width: 279px;
+
+  @media (#{$screen-tablet}) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 37px;
+    grid-column-gap: 137px;
+    max-width: 768px;
+  }
+
+  @media (#{$screen-desktop}) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .about__item {
@@ -27,6 +47,7 @@
   position: relative;
   margin-bottom: 24px;
   padding-left: 80px;
+  min-height: 54px;
 
   &:last-child {
     margin-bottom: 0;
@@ -72,5 +93,9 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+  }
+
+  @media (#{$screen-tablet}) {
+
   }
 }

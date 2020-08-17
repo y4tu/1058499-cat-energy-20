@@ -2,31 +2,72 @@
   font-family: $special-text;
   font-size: 20px;
   line-height: 20px;
+  margin: 0 -20px;
+
+  @media (#{$screen-tablet}) {
+    margin: 0;
+  }
 }
 
 .nav__list {
   @include list-reset;
+
+  @media (#{$screen-tablet}) {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .nav__item {
-  width: 100%;
   text-align: center;
   border-top: 1px solid $basic-gray;
+
   &:last-child {
     border-bottom: 1px solid $basic-gray;
+  }
+
+  @media (#{$screen-tablet}) {
+    border: none;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &:last-child .nav__link {
+    @media (#{$screen-tablet}) {
+      margin-right: 0;
+    }
   }
 }
 
 .nav__link {
   display: block;
-  font-style: normal;
   text-transform: uppercase;
   font-weight: 500;
-  text-decoration: none;
   color: $basic-black;
   padding-top: 22px;
   padding-bottom: 24px;
   padding-left: 20px;
   padding-right: 23px;
 
+  @media (#{$screen-tablet}) {
+    padding: 0;
+    font-weight: normal;
+    @include font (18px, 24px);
+    padding-top: 10px;
+    padding-bottom: 8px;
+    margin-right: 33px;
+  }
+
+  @media (#{$screen-desktop}) {
+    @include font (20px, 24px)
+  }
+
+  &--active {
+    @media (#{$screen-tablet}) {
+      border-bottom: 2px solid $basic-green;
+    }
+  }
 }

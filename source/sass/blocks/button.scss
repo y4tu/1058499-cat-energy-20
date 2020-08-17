@@ -1,14 +1,15 @@
 .button {
+  display: block;
   padding: 10px 40px;
   border: none;
-  color: inherit;
+  color: $basic-white;
   background-color: transparent;
   cursor: pointer;
   font-family: $special-text;
-  font-size: 14px;
-  line-height: 18px;
+  @include font (16px, 18px);
   text-transform: uppercase;
   max-height: 40px;
+  text-align: center;
 
   &--primary {
     background-color: $basic-green;
@@ -16,10 +17,14 @@
 
   &--secondary {
     background-color: $basic-gray;
+    color: $special-dark-gray;
   }
 
   &--toggle {
     padding: 0;
+
+    @media (#{$screen-tablet}) {
+      display: none;
+    }
   }
 }
-

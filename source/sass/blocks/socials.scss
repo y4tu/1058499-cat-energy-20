@@ -2,10 +2,46 @@
   @include list-reset;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 20px;
   padding-bottom: 21px;
   padding-left: 73px;
   padding-right: 77px;
   border-top: 1px solid $special-gray-4;
   border-bottom: 1px solid $special-gray-4;
+
+  @media (#{$screen-tablet}) {
+    border: none;
+    width: 129px;
+    padding: 0;
+  }
+}
+
+.socials__svg {
+  display: block;
+  fill: $special-gray-2;
+
+  &--vk {
+    width: 29px;
+    height: 17px;
+  }
+
+  &--insta {
+    width: 23px;
+    height: 23px;
+  }
+
+  &--fb {
+    width: 13px;
+    height: 27px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
