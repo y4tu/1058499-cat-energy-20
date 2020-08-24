@@ -3,7 +3,7 @@
 @import "variables";
 @import "fonts";
 @import "vis-hid";
-@import "blocks/global";
+@import "global";
 @import "mixin";
 @import "blocks/container";
 @import "blocks/button";
@@ -32,6 +32,7 @@
 @import "blocks/socials";
 @import "blocks/form";
 @import "blocks/union";
+@import "blocks/slider";
 
 //FOOTER
 @import "blocks/footer";

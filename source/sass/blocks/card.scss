@@ -1,8 +1,6 @@
 .card {
-  width: 100%;
   height: 100%;
   border-top: 1px solid $basic-gray;
-  margin: 0 -20px;
 
   &:last-child {
     border-bottom: 1px solid $basic-gray;
@@ -21,20 +19,19 @@
 }
 
 .card__inner {
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 19px 20px 24px;
 
   @media (#{$screen-tablet}) {
-    width: 324px;
+    min-width: 324px;
     display: block;
     margin: 0;
     padding: 0 36px 40px;
   }
 
   @media (#{$screen-desktop}) {
-    width: 245px;
+    min-width: 245px;
     padding: 0 35px 30px 40px;
   }
 
@@ -44,7 +41,8 @@
     }
 
     @media (#{$screen-desktop}) {
-      padding: 13px 33px 28px 40px;
+      padding: 24px 33px 28px 40px;
+      height: 100%;
     }
   }
 }
@@ -105,6 +103,13 @@
       margin-top: 51px;
     }
   }
+}
+
+.card__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: $special-dark-gray-2;
 }
 
 .card__img {

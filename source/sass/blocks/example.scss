@@ -1,14 +1,32 @@
 .example {
   background-color: $special-gray-3;
+
+  @media (#{$screen-tablet}) {
+    background-color: $basic-white;
+  }
+
+  @media (#{$screen-desktop}) {
+    background-color: $special-gray-3;
+  }
 }
 
 .example__title {
   margin: 0;
-font-weight: normal;
+  font-weight: normal;
   font-family: $special-text;
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 33px;
+
+  @media (#{$screen-desktop}) {
+    background-color: $basic-white;
+  }
+}
+
+.example__inner {
+  @media (#{$screen-tablet}) {
+    margin-bottom: 250px;
+  }
 }
 
 .example__text {

@@ -1,6 +1,3 @@
-.form {
-}
-
 .form__title {
   @include font (36px, 36px);
   margin: 0;
@@ -39,6 +36,14 @@
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+
+  &--additional {
+    @media (#{$screen-tablet}) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 }
 
 .form__fieldset {
@@ -64,8 +69,8 @@
   }
 
   &--cat-data {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
+    margin-bottom: 27px;
 
     @media (#{$screen-tablet}) {
       margin-bottom: 72px;
@@ -80,6 +85,14 @@
 
   &--button {
     padding-top: 9px;
+
+    @media (#{$screen-tablet}) {
+      padding-bottom: 51px;
+    }
+
+    @media (#{$screen-desktop}) {
+      padding-bottom: 61px;
+    }
   }
 }
 
@@ -108,6 +121,33 @@
       margin-bottom: 50px;
     }
   }
+
+  &--checkbox {
+    @media (#{$screen-tablet}) {
+      margin: 0;
+      margin-bottom: 32px;
+      flex-basis: 50%;
+
+      &:nth-child(3n),
+      &:nth-child(4n) {
+        margin: 0;
+      }
+    }
+
+    @media (#{$screen-desktop}) {
+      flex-basis: 25%;
+      margin: 0;
+    }
+  }
+
+  &--contacts {
+    position: relative;
+
+    @media (#{$screen-desktop}) {
+      margin: 0;
+      margin-right: 78px;
+    }
+  }
 }
 
 .form__input {
@@ -125,14 +165,18 @@
     border: 1px solid $special-gray;
     padding: 13px 15px 14px;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: $basic-gray-2;
     }
 
-    &:active {
+    &:focus {
       border-color: $special-dark-gray;
     }
+
+    &:focus + .form__svg {
+      fill: $basic-green;
+    }
+
   }
 
   @media (#{$screen-tablet}) {
@@ -141,11 +185,12 @@
 }
 
 .form__label {
-  @include font (16px, 18px);
+  @include font(16px, 18px);
   text-transform: uppercase;
   padding-right: 15px;
   font-family: $special-text;
   white-space: nowrap;
+  z-index: 1;
 
   &--radio,
   &--checkbox {
@@ -154,6 +199,7 @@
 
     @media (#{$screen-tablet}) {
       padding-left: 68px;
+      padding-right: 0;
     }
 
     &::before {
@@ -162,6 +208,9 @@
       position: absolute;
       top: -5px;
       left: 0;
+      background-size: 26px 26px;
+      background-position: center;
+      background-repeat: no-repeat;
 
       @media (#{$screen-tablet}) {
         top: -12px;
@@ -193,26 +242,114 @@
       background-color: $basic-green;
       width: 13.5px;
       height: 13.5px;
+
+      @media (#{$screen-tablet}) {
+        width: 18px;
+        height: 18px;
+        top: -1px;
+        left: 19px;
+      }
     }
   }
 
-  .form__radio:checked + .form__label--radio::after {
-    display: inline-block;
-  }
+  &--checkbox {
+    padding-bottom: 13px;
+    padding-left: 60px;
 
-  .form__checkbox {
+    &::before {
+      border: 1px solid $special-gray;
+      width: 30px;
+      height: 30px;
 
+      @media (#{$screen-tablet}) {
+        width: 40px;
+        height: 40px;
+        left: 0;
+      }
+    }
   }
 
   &--textarea {
+    width: 100%;
     padding: 0;
   }
+}
+
+.form__svg {
+  display: block;
+
+  &--mail {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    top: 16px;
+    left: 246px;
+
+    @media (#{$screen-tablet}) {
+    width: 18px;
+    height: 13px;
+    top: 23px;
+    left: 670px;
+    }
+
+    @media (#{$screen-desktop}) {
+      top: 23px;
+      left: 493px;
+    }
+  }
+
+  &--phone {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    left: 246px;
+
+    @media (#{$screen-tablet}) {
+      top: 19px;
+      left: 670px;
+    }
+
+    @media (#{$screen-desktop}) {
+      top: 20px;
+      left: 494px;
+    }
+  }
+}
+
+.form__radio:checked + .form__label--radio::after {
+  display: inline-block;
+}
+
+.form__checkbox:checked + .form__label--checkbox::before {
+  background-image: url("/img/icon-tick.svg");
+}
+
+.form__radio:hover + .form__label--radio::before,
+.form__radio:focus + .form__label--radio::before,
+.form__checkbox:hover + .form__label--checkbox::before,
+.form__checkbox:focus + .form__label--checkbox::before {
+  border-color: $special-gray-7;
+}
+
+.form__radio:active + .form__label--radio,
+.form__checkbox:active + .form__label--checkbox {
+  opacity: 0.3;
 }
 
 .form__subtitle {
   display: flex;
   position: relative;
   flex-wrap: nowrap;
+  margin-bottom: 34px;
+
+  @media (#{$screen-tablet}) {
+    margin-bottom: 76px;
+
+    &--additional {
+      margin-bottom: 57px;
+    }
+  }
 }
 
 .form__subtitle-text {
@@ -220,29 +357,8 @@
   font-weight: normal;
   font-family: $special-text;
   margin: 0;
-  margin-bottom: 34px;
   padding-right: 15px;
-
 }
-
-.form__line {
-  display: block;
-  flex-basis: 30%;
-  height: 2px;
-  flex-grow: 1;
-  flex-shrink: 0;
-  background-color: $basic-green;
-  margin-top: 15px;
-
-  &--contacts {
-    margin-top: 30px;
-
-    @media (#{$screen-desktop}) {
-      margin-top: 15px;
-    }
-  }
-}
-
 
 .form__textarea {
   width: 100%;
@@ -256,12 +372,11 @@
   padding-right: 12px;
   outline: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: $basic-gray-2;
   }
 
-  &:active {
+  &:focus {
     border-color: $special-dark-gray;
   }
 }
@@ -269,6 +384,15 @@
 .form__button {
   width: 100%;
   margin-bottom: 21px;
+
+  @media (#{$screen-tablet}) {
+    flex-basis: 50%;
+    max-width: 282px;
+  }
+
+  @media (#{$screen-desktop}) {
+    max-width: 568px;
+  }
 }
 
 .form__footnote {
@@ -279,4 +403,8 @@
   width: 100%;
   margin-bottom: 12px;
 
+  @media (#{$screen-tablet}) {
+    flex-basis: 50%;
+    text-align: start;
+  }
 }

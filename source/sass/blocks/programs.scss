@@ -1,5 +1,10 @@
 .programs {
   padding-bottom: 27px;
+
+  @media (#{$screen-desktop}) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .programs__item {
@@ -12,21 +17,49 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (#{$screen-tablet}) {
+    padding-top: 77px;
+    padding-left: 53px;
+    padding-bottom: 53px;
+  }
+
+  @media (#{$screen-desktop}) {
+    width: 570px;
+    margin: 0;
+    margin-right: 80px;
+    padding: 77px 51px 55px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .programs__title {
+  @include font (24px, 37px);
   margin: 0;
-font-weight: normal;
+  font-weight: normal;
   display: block;
   position: relative;
   font-family: $special-text;
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: normal;
   text-transform: uppercase;
   padding-left: 69px;
   padding-top: 30px;
-  padding-bottom: 15%;
+  margin-bottom: 29px;
+
+  @media (#{$screen-tablet}) {
+    @include font (36px, 36px);
+    padding: 0;
+    margin-bottom: 24px;
+    width: 206px;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding-left: 163px;
+    width: auto;
+    margin-bottom: 73px;
+  }
 
   &::before {
     content: "";
@@ -36,8 +69,22 @@ font-weight: normal;
     position: absolute;
     top: 24px;
     left: 0;
-    min-width: 50px;
-    min-height: 50px;
+    width: 50px;
+    height: 50px;
+
+    @media (#{$screen-tablet}) {
+      width: 200px;
+      height: 200px;
+      top: 11px;
+      left: 395px;
+    }
+
+    @media (#{$screen-desktop}) {
+      width: 100px;
+      height: 100px;
+      top: -30px;
+      left: 0;
+    }
   }
 
   &::after {
@@ -55,6 +102,20 @@ font-weight: normal;
       left: 8px;
       width: 36px;
       height: 50px;
+
+      @media (#{$screen-tablet}) {
+        width: 140px;
+        height: 192px;
+        top: 0;
+        left: 425px;
+      }
+
+      @media (#{$screen-desktop}) {
+        width: 70px;
+        height: 97px;
+        top: -36px;
+        left: 16px;
+      }
     }
   }
 
@@ -65,36 +126,65 @@ font-weight: normal;
       left: -12px;
       width: 67px;
       height: 50px;
+
+      @media (#{$screen-tablet}) {
+        width: 268px;
+        height: 112px;
+        top: 54px;
+        left: 359px;
+      }
+
+      @media (#{$screen-desktop}) {
+        width: 134px;
+        height: 56px;
+        top: -10px;
+        left: -18px;
+      }
     }
   }
 }
 
 .programs__text {
+  @include font (14px, 18px);
   margin: 0;
-  font-size: 14px;
-  line-height: 18px;
   font-weight: normal;
   padding-bottom: 23px;
   border-bottom: 1px solid $special-gray-4;
   text-align: start;
+
+  @media (#{$screen-tablet}) {
+    @include font (16px, 24px);
+    border: none;
+    width: 377px;
+    padding: 0;
+    margin-bottom: 48px;
+  }
+
+  @media (#{$screen-desktop}) {
+    width: 462px;
+  }
 }
 
 .programs__link {
+  @include font (16px,16px);
   display: block;
   position: relative;
   padding-top: 15px;
   padding-bottom: 18px;
   text-align: start;
   font-family: $special-text;
-  font-size: 16px;
-  line-height: 16px;
   font-weight: normal;
   text-transform: uppercase;
   color: $basic-black;
 
+  @media (#{$screen-tablet}) {
+    @include font (20px, 30px);
+    padding: 0;
+  }
+
   &::after {
     content: "";
-    background-image: url("/img/icon-right-arrow-verylong.svg");
+    background-image: url("/img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     display: block;
     position: absolute;
@@ -102,5 +192,10 @@ font-weight: normal;
     left: 102px;
     min-width: 32px;
     min-height: 10px;
+
+    @media (#{$screen-tablet}) {
+      top: 10px;
+      left: 135px;
+    }
   }
 }
