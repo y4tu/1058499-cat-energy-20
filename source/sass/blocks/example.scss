@@ -1,20 +1,60 @@
 .example {
   background-color: $special-gray-3;
+
+  @media (#{$screen-tablet}) {
+    background-color: $basic-white;
+  }
+
+  @media (#{$screen-desktop}) {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $special-gray-3;
+  }
 }
 
 .example__title {
   margin: 0;
-font-weight: normal;
+  font-weight: normal;
   font-family: $special-text;
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 33px;
+
+  @media (#{$screen-tablet}) {
+    margin: 0;
+    margin-bottom: 63px;
+  }
+
+  @media (#{$screen-desktop}) {
+    background-color: $basic-white;
+    padding-bottom: 76px;
+    flex-basis: 100%;
+  }
+}
+
+.example__inner {
+  @media (#{$screen-tablet}) {
+    margin-bottom: 250px;
+  }
+
+  @media (#{$screen-desktop}) {
+    flex-basis: 50%;
+  }
 }
 
 .example__text {
+  @include font (14px, 18px);
   margin: 0;
   font-style: $basic-text;
-  font-size: 14px;
-  line-height: 18px;
   margin-bottom: 25px;
+
+  @media (#{$screen-tablet}) {
+    @include font (16px, 24px);
+  }
+}
+
+.example__slider {
+  @media (#{$screen-desktop}) {
+    flex-basis: 50%;
+  }
 }

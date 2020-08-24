@@ -12,4 +12,13 @@
       padding: 5px 0;
     }
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

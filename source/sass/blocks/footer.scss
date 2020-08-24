@@ -6,6 +6,10 @@
   }
 }
 
+.footer__inner {
+  position: relative;
+}
+
 .footer__map {
   margin: 0 -20px;
 
@@ -16,10 +20,38 @@
   @media (#{$screen-desktop}) {
     margin: 0 -110px;
   }
+
+  &::before {
+    content: "";
+    background-image: url("/img/map-pin.png");
+    background-size: 60px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 340px;
+    left: 130px;
+    width: 57px;
+    height: 53px;
+
+    @media (#{$screen-tablet}) {
+      width: 113px;
+      height: 105px;
+      background-size: 120px 100px;
+      top: 365px;
+      left: 330px;
+    }
+
+    @media (#{$screen-desktop}) {
+      height: 106px;
+      background-size: 120px 100px;
+      top: 210px;
+      left: 1000px;
+    }
+  }
 }
 
 .footer__content {
-
   @media (#{$screen-tablet}) {
     display: flex;
     justify-content: space-between;

@@ -29,13 +29,14 @@
 
   @media (#{$screen-tablet}) {
     border: none;
+    margin-right: 33px;
 
     &:last-child {
       border: none;
     }
   }
 
-  &:last-child .nav__link {
+  &:last-child {
     @media (#{$screen-tablet}) {
       margin-right: 0;
     }
@@ -58,7 +59,6 @@
     @include font (18px, 24px);
     padding-top: 10px;
     padding-bottom: 8px;
-    margin-right: 33px;
   }
 
   @media (#{$screen-desktop}) {
@@ -69,5 +69,14 @@
     @media (#{$screen-tablet}) {
       border-bottom: 2px solid $basic-green;
     }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

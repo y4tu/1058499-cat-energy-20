@@ -1,6 +1,14 @@
 .promo {
   color: $basic-white;
   padding-bottom: 22px;
+
+  @media (#{$screen-tablet}) {
+    color: $basic-black;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding-top: 24px;
+  }
 }
 
 .promo__desc {
@@ -9,6 +17,16 @@
   background-position: center;
   background-size: cover;
   min-height: 305px;
+  margin: 0 -20px;
+
+  @media (#{$screen-retina}) {
+    background-image: url("/img/index-background-mobile@2x.jpg");
+  }
+
+  @media (#{$screen-tablet}) {
+    background-image: none;
+    margin: 0;
+  }
 }
 
 .promo__item {
@@ -18,25 +36,56 @@
 }
 
 .promo__title {
+  @include font (36px, 36px);
   margin: 0;
-font-weight: normal;
-  font-family: $special-text;
-  font-size: 36px;
-  line-height: 36px;
   font-weight: normal;
+  font-family: $special-text;
   padding-bottom: 25px;
+
+  @media (#{$screen-tablet}) {
+    @include font (60px, 60px);
+    width: 414px;
+    margin-left: 82px;
+    margin-bottom: 41px;
+    padding: 0;
+  }
 }
 
 .promo__slogan {
+  @include font (14px, 14px);
   margin: 0;
   font-family: $special-text;
-  font-size: 14px;
-  line-height: 14px;
   font-weight: normal;
   text-transform: uppercase;
+
+  @media (#{$screen-tablet}) {
+    @include font (20px);
+    margin-left: 82px;
+  }
 }
 
-.promo__picture {
+.promo__image {
   display: flex;
   justify-content: center;
+
+  @media (#{$screen-tablet}) {
+    margin-top: 35px;
+    padding-left: 20px;
+  }
+}
+
+.promo__button {
+  @media (#{$screen-tablet}) {
+    //width: 244px;
+    //height: 54px;
+    margin-top: -475px;
+    margin-bottom: 475px;
+    margin-left: 82px;
+    position: relative;
+    padding: 14px 26px;
+    max-height: none;
+    width: fit-content;
+
+    @include font (20px, 20px);
+  }
 }

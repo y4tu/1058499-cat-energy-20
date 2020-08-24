@@ -4,4 +4,17 @@
   background-color: $basic-white;
   min-width: 320px;
   font-family: $basic-text;
+
+  &--index {
+    @media (#{$screen-desktop}) {
+      background-image: url("/img/index-background-desktop@1x.jpg");
+      background-size: 720px 696px;
+      background-repeat: no-repeat;
+      background-position: top right;
+
+      @media (#{$screen-retina}) {
+        background-image: url("/img/index-background-desktop@2x.jpg");
+      }
+    }
+  }
 }
