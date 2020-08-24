@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+
+  @media (#{$screen-tablet}) {
+    justify-content: start;
+  }
 }
 
 .stats__item {
