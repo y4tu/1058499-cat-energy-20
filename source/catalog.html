@@ -18,7 +18,7 @@
           </picture>
         </a>
       </div>
-      <button type="button" name="toggle" class="header__button button button--toggle" aria-label="Показать/скрыть меню">
+      <button type="button" name="toggle" class="header__button button button--toggle visually-hidden" aria-label="Показать/скрыть меню">
       </button>
     </div>
     <nav class="header__nav nav">
@@ -438,8 +438,8 @@
     </main>
 
   <footer class="page__footer footer">
-    <div class="footer__inner container">
-      <div class="footer__contacts contacts">
+    <div class="footer__inner">
+      <div class="footer__contacts contacts container">
         <h2 class="contacts__title">
           Приглашаем к сотрудничеству дилеров!
         </h2>
@@ -455,16 +455,9 @@
       </div>
 
       <div class="footer__map">
-        <picture class="footer__picture">
-          <source sizes="1440px" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x"
-                  media="(min-width: 1440px)">
-          <source sizes="768px" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x"
-                  media="(min-width: 768px)">
-          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
-        </picture>
       </div>
 
-      <div class="footer__content">
+      <div class="footer__content container">
         <div class="footer__logo logo logo--footer">
           <a href="index.html" class="logo__link logo__link--footer">
             <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
@@ -474,7 +467,7 @@
         <ul class="footer__socials socials">
           <li class="socials__item">
             <a href="#" class="socials__link" aria-label="Ссылка на Вконтакте">
-              <svg class="socials__svg socials__svg--vk" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              <svg width="29" height="17" class="socials__svg socials__svg--vk" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
@@ -495,7 +488,7 @@
           </li>
           <li class="socials__item">
             <a href="#" class="socials__link" aria-label="Ссылка на Instagram">
-              <svg class="socials__svg socials__svg--insta" version="1.1" id="Layer_1"
+              <svg width="23" height="23" class="socials__svg socials__svg--insta" version="1.1" id="Layer_1"
                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
@@ -508,7 +501,7 @@
           </li>
           <li class="socials__item">
             <a href="#" class="socials__link" aria-label="Ссылка на Facebook">
-              <svg class="socials__svg socials__svg--fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              <svg width="13" height="27" class="socials__svg socials__svg--fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                 <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18

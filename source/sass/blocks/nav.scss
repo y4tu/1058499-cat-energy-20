@@ -25,6 +25,10 @@
 
   &:last-child {
     border-bottom: 1px solid $basic-gray;
+
+    @media (#{$screen-tablet}) {
+      margin-right: 0;
+    }
   }
 
   @media (#{$screen-tablet}) {
@@ -33,12 +37,6 @@
 
     &:last-child {
       border: none;
-    }
-  }
-
-  &:last-child {
-    @media (#{$screen-tablet}) {
-      margin-right: 0;
     }
   }
 }
@@ -54,20 +52,32 @@
   padding-right: 23px;
 
   @media (#{$screen-tablet}) {
+    @include font (18px, 24px);
     padding: 0;
     font-weight: normal;
-    @include font (18px, 24px);
     padding-top: 10px;
     padding-bottom: 8px;
   }
 
   @media (#{$screen-desktop}) {
-    @include font (20px, 24px)
+    @include font (20px, 24px);
   }
 
   &--active {
     @media (#{$screen-tablet}) {
       border-bottom: 2px solid $basic-green;
+    }
+  }
+
+  &--index {
+    @media (#{$screen-desktop}) {
+      color: $basic-white;
+    }
+  }
+
+  &--index-active {
+    @media (#{$screen-desktop}) {
+      border-bottom: 2px solid $basic-white;
     }
   }
 

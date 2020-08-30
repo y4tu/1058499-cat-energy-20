@@ -4,16 +4,10 @@
   @media (#{$screen-tablet}) {
     background-color: $basic-white;
   }
-
-  @media (#{$screen-desktop}) {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $special-gray-3;
-  }
 }
 
 .example__title {
-  margin: 0;
+  margin: 0 auto;
   font-weight: normal;
   font-family: $special-text;
   font-size: 36px;
@@ -21,24 +15,46 @@
   margin-bottom: 33px;
 
   @media (#{$screen-tablet}) {
-    margin: 0;
+    @include font (60px, 60px);
+    margin: 0 auto;
     margin-bottom: 63px;
   }
 
   @media (#{$screen-desktop}) {
-    background-color: $basic-white;
+    max-width: 1440px;
+    margin: 0 auto;
     padding-bottom: 76px;
     flex-basis: 100%;
   }
 }
 
+.example__wrapper {
+  padding-bottom: 36px;
+
+  @media (#{$screen-desktop}) {
+    display: flex;
+    width: 100%;
+    padding: 0 110px;
+    background-color: $basic-gray;
+  }
+}
+
 .example__inner {
+  padding: 0 20px;
+  margin-bottom: 42px;
+
   @media (#{$screen-tablet}) {
-    margin-bottom: 250px;
+    margin-bottom: 64px;
+    padding: 0 30px;
   }
 
   @media (#{$screen-desktop}) {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 40px);
+    max-width: 570px;
+    margin: 0;
+    margin-top: 70px;
+    margin-bottom: 75px;
+    padding: 0;
   }
 }
 
@@ -51,10 +67,16 @@
   @media (#{$screen-tablet}) {
     @include font (16px, 24px);
   }
+
+  @media (#{$screen-desktop}) {
+    width: 470px;
+    margin-bottom: 69px;
+  }
 }
 
 .example__slider {
   @media (#{$screen-desktop}) {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 40px);
+    max-width: 570px;
   }
 }
