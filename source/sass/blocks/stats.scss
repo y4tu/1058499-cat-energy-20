@@ -8,6 +8,11 @@
   @media (#{$screen-tablet}) {
     justify-content: start;
     align-items: center;
+    padding-bottom: 191px;
+  }
+
+  @media (#{$screen-tablet}) {
+    padding: 0;
   }
 }
 
@@ -39,6 +44,10 @@
     @media (#{$screen-tablet}) {
       @include font (14px, 14px);
       background-color: $basic-white;
+      width: min-content;
+      white-space: nowrap;
+      margin-bottom: -5px;
+      padding: 0 5px;
     }
 
     @media (#{$screen-desktop}) {

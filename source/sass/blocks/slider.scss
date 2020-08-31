@@ -1,6 +1,7 @@
 .slider {
-  //width: 570px;
-  //background-color: $special-gray-3;
+  @media (#{$screen-desktop}) {
+    margin-top: -180px;
+  }
 }
 
 .slider__before,
@@ -10,6 +11,8 @@
   margin-bottom: 23px;
 
   @media (#{$screen-tablet}) {
+    width: 708px;
+    margin-bottom: 31px;
   }
 }
 
