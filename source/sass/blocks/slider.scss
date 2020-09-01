@@ -1,3 +1,100 @@
 .slider {
-  background-color: $special-gray-3;
+  @media (#{$screen-desktop}) {
+    margin-top: -180px;
+  }
+}
+
+.slider__before,
+.slider__after {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 23px;
+
+  @media (#{$screen-tablet}) {
+    width: 708px;
+    margin-bottom: 31px;
+  }
+}
+
+.slider__controls {
+  @include font (16px, 20px);
+  font-family: $special-text;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  //padding: ;
+
+  @media (#{$screen-tablet}) {
+    @include font (20px, 30px);
+  }
+}
+
+.slider__bar {
+  display: block;
+  position: relative;
+  width: 84px;
+  height: 14px;
+  background-color: $basic-white;
+  border: 1px solid $basic-gray-2;
+  border-radius: 6px;
+  margin: 0 17px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    background-color: $basic-green;
+    border-radius: 6px;
+    top: 3px;
+    left: 4px;
+  }
+
+  @media (#{$screen-tablet}) {
+    width: 428px;
+    height: 6px;
+    background-color: $basic-gray-2;
+    border-radius: 6px;
+    margin: 0 17px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.slider__toggle {
+  display: none;
+
+  @media (#{$screen-tablet}) {
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $basic-gray-2;
+    border-radius: 50%;
+    background-color: $basic-white;
+    top: -15px;
+    left: 190px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: $basic-green;
+      border-radius: 50%;
+      top: 12px;
+      left: 12px;
+    }
+  }
+}
+
+.slider__button {
+  color: $basic-black;
 }

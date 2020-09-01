@@ -30,22 +30,6 @@
   }
 }
 
-.form__group {
-  @media (#{$screen-desktop}) {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-
-  &--additional {
-    @media (#{$screen-tablet}) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  }
-}
-
 .form__fieldset {
   @include fieldset-reset;
   padding: 25px 0;
@@ -83,6 +67,10 @@
     }
   }
 
+  &--additional {
+
+  }
+
   &--button {
     padding-top: 9px;
 
@@ -91,8 +79,40 @@
     }
 
     @media (#{$screen-desktop}) {
-      padding-bottom: 61px;
+      padding: 0;
+      margin-bottom: 82px;
     }
+  }
+}
+
+.form__group {
+  @media (#{$screen-desktop}) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &--items {
+    @media (#{$screen-tablet}) {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 32px;
+      grid-column-gap: 61px;
+      padding: 0 40px;
+    }
+
+    @media (#{$screen-desktop}) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 45px;
+      padding: 0;
+    }
+  }
+
+  &--button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
   }
 }
 
@@ -170,7 +190,8 @@
     }
 
     &:focus {
-      border-color: $special-dark-gray;
+      border: 2px inset $special-dark-gray;
+      padding: 12px 14px 13px;
     }
 
     &:focus + .form__svg {
@@ -191,6 +212,7 @@
   font-family: $special-text;
   white-space: nowrap;
   z-index: 1;
+  cursor: pointer;
 
   &--radio,
   &--checkbox {
@@ -286,10 +308,10 @@
     left: 246px;
 
     @media (#{$screen-tablet}) {
-    width: 18px;
-    height: 13px;
-    top: 23px;
-    left: 670px;
+      width: 18px;
+      height: 13px;
+      top: 23px;
+      left: 670px;
     }
 
     @media (#{$screen-desktop}) {
@@ -347,7 +369,7 @@
     margin-bottom: 76px;
 
     &--additional {
-      margin-bottom: 57px;
+      margin-bottom: 67px;
     }
   }
 }
@@ -358,6 +380,10 @@
   font-family: $special-text;
   margin: 0;
   padding-right: 15px;
+
+  @media (#{$screen-tablet}) {
+    @include font (36px, 36px);
+  }
 }
 
 .form__textarea {
@@ -377,7 +403,11 @@
   }
 
   &:focus {
-    border-color: $special-dark-gray;
+    border: 2px inset $special-dark-gray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 14px;
+    padding-right: 11px;
   }
 }
 
@@ -386,12 +416,18 @@
   margin-bottom: 21px;
 
   @media (#{$screen-tablet}) {
-    flex-basis: 50%;
-    max-width: 282px;
+    @include font (20px, 20px);
+    min-height: 52px;
+    flex-basis: calc(50% - 30px);
+    padding: 13px 45px;
+    margin-right: 60px;
   }
 
   @media (#{$screen-desktop}) {
-    max-width: 568px;
+    flex-basis: calc(50% - 41px);
+    padding: 13px 188px;
+    margin: 0;
+    margin-right: 81px;
   }
 }
 
@@ -404,7 +440,12 @@
   margin-bottom: 12px;
 
   @media (#{$screen-tablet}) {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 30px);
     text-align: start;
+  }
+
+  @media (#{$screen-tablet}) {
+    margin: 0;
+    flex-basis: calc(50% - 40px);
   }
 }

@@ -18,23 +18,23 @@
           </picture>
         </a>
       </div>
-      <button type="button" name="toggle" class="header__button button button--toggle" aria-label="Показать/скрыть меню">
+      <button type="button" name="toggle" class="header__button button button--toggle visually-hidden" aria-label="Показать/скрыть меню">
       </button>
     </div>
     <nav class="header__nav nav">
       <ul class="nav__list">
         <li class="nav__item">
-          <a href="index.html" class="nav__link nav__link--active">
+          <a href="index.html" class="nav__link nav__link--active nav__link--index nav__link--index-active">
             Главная
           </a>
         </li>
         <li class="nav__item">
-          <a href="catalog.html" class="nav__link">
+          <a href="catalog.html" class="nav__link nav__link--index">
             Каталог продукции
           </a>
         </li>
         <li class="nav__item">
-          <a href="form.html" class="nav__link">
+          <a href="form.html" class="nav__link nav__link--index">
             Подбор программы
           </a>
         </li>
@@ -55,8 +55,8 @@
           <div class="promo__item">
             <div class="promo__image">
               <picture class="promo__picture">
-                <source sizes="1440px" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
-                <source sizes="768px" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+                <source srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
                 <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Изображение корма Cat Energy Pro Курица">
               </picture>
             </div>
@@ -122,55 +122,67 @@
       </section>
 
       <section class="main__example example">
-        <h2 class="example__title container">
-          Живой пример
-        </h2>
-        <div class="example__inner container">
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-            изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
-          </p>
-          <dl class="example__stats stats">
-            <div class="stats__item">
-              <dt class="stats__term">
-                5 кг
-              </dt>
-              <dd class="stats__desc">
-                снижение веса
-              </dd>
-            </div>
-            <div class="stats__item">
-              <dt class="stats__term">
-                60 дней
-              </dt>
-              <dd class="stats__desc">
-                затрачено времени
-              </dd>
-            </div>
-            <div class="stats__item">
-              <dd class="stats__desc">
-                Затраты на питание:
-              </dd>
-              <dt class="stats__term">
-                15000 руб.
-              </dt>
-            </div>
-          </dl>
-        </div>
-        <div class="example__slider slider">
-          <div class="slider__inner container">
+        <div class="example__content container">
+          <h2 class="example__title">
+            Живой пример
+          </h2>
+          <div class="example__inner">
+            <p class="example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
+              без
+              изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
+            </p>
+            <dl class="example__stats stats">
+              <div class="stats__item">
+                <dt class="stats__term">
+                  5 кг
+                </dt>
+                <dd class="stats__desc">
+                  снижение веса
+                </dd>
+              </div>
+              <div class="stats__item">
+                <dt class="stats__term">
+                  60 дней
+                </dt>
+                <dd class="stats__desc">
+                  затрачено времени
+                </dd>
+              </div>
+              <div class="stats__item">
+                <dd class="stats__desc">
+                  Затраты на питание:
+                </dd>
+                <dt class="stats__term">
+                  15000 руб.
+                </dt>
+              </div>
+            </dl>
+          </div>
+          <div class="example__slider slider">
             <div class="slider__before">
-              <img class="slider__img" src="https://via.placeholder.com/311x232" alt="Изображение кота с ожирением">
+              <picture class="slider__picture">
+                <source srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x"
+                        media="(min-width: 1440px)">
+                <source srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x"
+                        media="(min-width: 768px)">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Толстенький котик">
+              </picture>
             </div>
-            <div class="slider__after">
-              <img class="slider__img" src="https://via.placeholder.com/251x240" alt="Изображение похудевшего кота">
+            <div class="slider__after visually-hidden">
+              <picture class="slider__picture">
+                <source srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x"
+                        media="(min-width: 1440px)">
+                <source srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x" media="(min-width: 768px)">
+                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Худенький котик">
+              </picture>
             </div>
             <div class="slider__controls">
               <a href="#" class="slider__button">
                 Было
               </a>
               <div class="slider__bar">
-                <div class="sliger__toggle">
+                <div class="slider__toggle">
                 </div>
               </div>
               <a href="#" class="slider__button">
@@ -184,8 +196,8 @@
     </main>
 
   <footer class="page__footer footer">
-    <div class="footer__inner container">
-      <div class="footer__contacts contacts">
+    <div class="footer__inner">
+      <div class="footer__contacts contacts container">
         <h2 class="contacts__title">
           Приглашаем к сотрудничеству дилеров!
         </h2>
@@ -201,16 +213,9 @@
       </div>
 
       <div class="footer__map">
-        <picture class="footer__picture">
-          <source sizes="1440px" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x"
-                  media="(min-width: 1440px)">
-          <source sizes="768px" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x"
-                  media="(min-width: 768px)">
-          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
-        </picture>
       </div>
 
-      <div class="footer__content">
+      <div class="footer__content container">
         <div class="footer__logo logo logo--footer">
           <a href="index.html" class="logo__link logo__link--footer">
             <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
@@ -220,7 +225,7 @@
         <ul class="footer__socials socials">
           <li class="socials__item">
             <a href="#" class="socials__link" aria-label="Ссылка на Вконтакте">
-              <svg class="socials__svg socials__svg--vk" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              <svg width="29" height="17" class="socials__svg socials__svg--vk" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
@@ -241,7 +246,7 @@
           </li>
           <li class="socials__item">
             <a href="#" class="socials__link" aria-label="Ссылка на Instagram">
-              <svg class="socials__svg socials__svg--insta" version="1.1" id="Layer_1"
+              <svg width="23" height="23" class="socials__svg socials__svg--insta" version="1.1" id="Layer_1"
                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
@@ -254,7 +259,7 @@
           </li>
           <li class="socials__item">
             <a href="#" class="socials__link" aria-label="Ссылка на Facebook">
-              <svg class="socials__svg socials__svg--fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              <svg width="13" height="27" class="socials__svg socials__svg--fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                 <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18

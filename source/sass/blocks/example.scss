@@ -1,19 +1,31 @@
 .example {
   background-color: $special-gray-3;
+  padding-top: 30px;
+  padding-bottom: 36px;
 
   @media (#{$screen-tablet}) {
-    background-color: $basic-white;
+    padding-top: 43px;
+    padding-bottom: 67px;
+    border-top: 1px solid $special-gray-6;
+    background: linear-gradient(to bottom, $basic-white 619px, $special-gray-3 619px);
   }
 
   @media (#{$screen-desktop}) {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $special-gray-3;
+    padding-top: 34px;
+    padding-bottom: 67px;
+    border: none;
+    background: linear-gradient(to bottom, $basic-white 170px, $basic-gray 170px);
   }
 }
 
+.example__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .example__title {
-  margin: 0;
+  flex-basis: 100%;
+  margin: 0 auto;
   font-weight: normal;
   font-family: $special-text;
   font-size: 36px;
@@ -21,24 +33,31 @@
   margin-bottom: 33px;
 
   @media (#{$screen-tablet}) {
-    margin: 0;
+    @include font (60px, 60px);
+    margin: 0 auto;
     margin-bottom: 63px;
   }
 
   @media (#{$screen-desktop}) {
-    background-color: $basic-white;
+    max-width: 1440px;
+    margin: 0 auto;
     padding-bottom: 76px;
     flex-basis: 100%;
   }
 }
 
 .example__inner {
+  margin-bottom: 42px;
+
   @media (#{$screen-tablet}) {
-    margin-bottom: 250px;
+    margin-bottom: 64px;
   }
 
   @media (#{$screen-desktop}) {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 40px);
+    max-width: 570px;
+    margin: 0;
+    padding-top: 70px;
   }
 }
 
@@ -51,10 +70,16 @@
   @media (#{$screen-tablet}) {
     @include font (16px, 24px);
   }
+
+  @media (#{$screen-desktop}) {
+    width: 470px;
+    margin-bottom: 69px;
+  }
 }
 
 .example__slider {
   @media (#{$screen-desktop}) {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 40px);
+    max-width: 570px;
   }
 }
