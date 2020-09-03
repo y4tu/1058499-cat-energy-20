@@ -47,7 +47,7 @@
     }
 
     @media (#{$screen-desktop}) {
-      flex-basis: 50%;
+      flex-basis: calc(50% - 40px);
       padding: 25px 28px;
     }
   }
@@ -61,14 +61,9 @@
     }
 
     @media (#{$screen-desktop}) {
-      flex-basis: 50%;
+      flex-basis: calc(50% - 40px);
       margin: 0;
-      margin-right: 80px;
     }
-  }
-
-  &--additional {
-
   }
 
   &--button {
@@ -88,7 +83,7 @@
 .form__group {
   @media (#{$screen-desktop}) {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -164,8 +159,8 @@
     position: relative;
 
     @media (#{$screen-desktop}) {
+      flex-basis: calc(50% - 40px);
       margin: 0;
-      margin-right: 78px;
     }
   }
 }
@@ -183,15 +178,19 @@
 
   &--text {
     border: 1px solid $special-gray;
-    padding: 13px 15px 14px;
+    padding: 13px 45px 15px 14px;
+
+    @media (#{$screen-tablet}) {
+      padding: 13px 55px 15px 14px;
+    }
 
     &:hover {
       border-color: $basic-gray-2;
     }
 
     &:focus {
-      border: 2px inset $special-dark-gray;
-      padding: 12px 14px 13px;
+      border: 1px solid $special-dark-gray;
+      box-shadow: 0 0 0 1px $special-dark-gray;
     }
 
     &:focus + .form__svg {
@@ -214,12 +213,17 @@
   z-index: 1;
   cursor: pointer;
 
+  @media (#{$screen-tablet}) {
+    @include font (20px, 20px);
+  }
+
   &--radio,
   &--checkbox {
     padding-left: 46px;
     position: relative;
 
     @media (#{$screen-tablet}) {
+      color: $special-dark-gray;
       padding-left: 68px;
       padding-right: 0;
     }
@@ -299,24 +303,24 @@
 
 .form__svg {
   display: block;
+  background-color: $basic-white;
 
   &--mail {
     position: absolute;
     width: 20px;
     height: 14px;
     top: 16px;
-    left: 246px;
+    right: 15px;
 
     @media (#{$screen-tablet}) {
       width: 18px;
       height: 13px;
       top: 23px;
-      left: 670px;
+      right: 20px;
     }
 
     @media (#{$screen-desktop}) {
       top: 23px;
-      left: 493px;
     }
   }
 
@@ -325,16 +329,15 @@
     width: 20px;
     height: 20px;
     top: 12px;
-    left: 246px;
+    right: 15px;
 
     @media (#{$screen-tablet}) {
       top: 19px;
-      left: 670px;
+      right: 20px;
     }
 
     @media (#{$screen-desktop}) {
       top: 20px;
-      left: 494px;
     }
   }
 }
@@ -397,17 +400,15 @@
   padding-left: 15px;
   padding-right: 12px;
   outline: none;
+  text-transform: uppercase;
 
   &:hover {
     border-color: $basic-gray-2;
   }
 
   &:focus {
-    border: 2px inset $special-dark-gray;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 14px;
-    padding-right: 11px;
+    border: 1px inset $special-dark-gray;
+    box-shadow: 0 0 0 1px $special-dark-gray;
   }
 }
 
