@@ -78,6 +78,12 @@
       margin-bottom: 82px;
     }
   }
+
+  &--contacts {
+    @media (#{$screen-desktop}) {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .form__group {
@@ -161,6 +167,11 @@
     @media (#{$screen-desktop}) {
       flex-basis: calc(50% - 40px);
       margin: 0;
+      margin-bottom: 25px;
+    }
+
+    &:last-child {
+      margin-bottom: 25px;
     }
   }
 }
@@ -175,6 +186,17 @@
   min-height: 45px;
   flex-grow: 1;
   outline: none;
+
+  &::placeholder {
+    @include font (16px, 18px);
+    font-family: $special-text;
+    text-transform: uppercase;
+    color: $special-dark-gray;
+
+    @media (#{$screen-tablet}) {
+      @include font (20px, 30px);
+    }
+  }
 
   &--text {
     border: 1px solid $special-gray;
@@ -202,6 +224,11 @@
   @media (#{$screen-tablet}) {
     @include font (20px, 30px);
   }
+
+  &--error {
+    border: 1px solid $status-error;
+    box-shadow: 0 0 0 1px $status-error;
+  }
 }
 
 .form__label {
@@ -212,6 +239,7 @@
   white-space: nowrap;
   z-index: 1;
   cursor: pointer;
+  color: $special-dark-gray;
 
   @media (#{$screen-tablet}) {
     @include font (20px, 20px);
@@ -223,7 +251,7 @@
     position: relative;
 
     @media (#{$screen-tablet}) {
-      color: $special-dark-gray;
+      color: $special-dark-gray-2;
       padding-left: 68px;
       padding-right: 0;
     }
@@ -407,8 +435,24 @@
   }
 
   &:focus {
-    border: 1px inset $special-dark-gray;
+    border: 1px solid $special-dark-gray;
     box-shadow: 0 0 0 1px $special-dark-gray;
+  }
+
+  &::placeholder {
+    @include font (16px, 18px);
+    font-family: $special-text;
+    text-transform: uppercase;
+    color: $special-dark-gray;
+
+    @media (#{$screen-tablet}) {
+      @include font (20px, 30px);
+    }
+  }
+
+  &--error {
+    border: 1px solid $status-error;
+    box-shadow: 0 0 0 1px $status-error;
   }
 }
 
