@@ -6,11 +6,21 @@
   font-family: $basic-text;
 
   &--index {
-    @media (#{$screen-desktop}) {
-      background-image: url("/img/index-background-desktop@1x.jpg");
-      background-size: 720px 696px;
-      background-repeat: no-repeat;
-      background-position: calc(50% + 360px) top;
+    &::before{
+      @media (#{$screen-desktop}) {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 694px;
+        z-index: -1;
+        background-image: url("/img/index-background-desktop@1x.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: $basic-green;
+      }
 
       @media (#{$screen-retina}) {
         background-image: url("/img/index-background-desktop@2x.jpg");

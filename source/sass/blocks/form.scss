@@ -1,7 +1,7 @@
 .form__title {
   @include font (36px, 36px);
   margin: 0;
-  margin-top: 27px;
+  margin-top: 30px;
   margin-bottom: 37px;
   font-weight: normal;
   font-family: $special-text;
@@ -21,43 +21,58 @@
   font-family: $special-text;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
+  width: 226px;
 
   @media (#{$screen-tablet}) {
     @include font (20px, 30px);
     margin-bottom: 66px;
-    width: 323px;
+    width: 370px;
+    padding-left: 40px;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding-left: 0;
   }
 }
 
 .form__fieldset {
   @include fieldset-reset;
-  padding: 25px 0;
+  //overflow: hidden;
+
+  @media (#{$screen-tablet}) {
+    padding: 0 30px;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding: 0;
+  }
 
   &--radio {
     border-top: 1px solid $basic-gray;
     border-bottom: 1px solid $basic-gray;
-    padding: 25px 20px;
-    margin: 0 -20px;
+    padding: 24px 20px;
+    margin: 0 -20px 27px;
 
     @media (#{$screen-tablet}) {
       border: 1px solid $special-gray-6;
-      width: 100%;
-      margin: 0;
+      width: 630px;
+      margin: 0 0 77px 41px;
+      padding: 36px 17px 34px 8px;
     }
 
     @media (#{$screen-desktop}) {
       flex-basis: calc(50% - 40px);
-      padding: 25px 28px;
+      padding: 34px 19px;
+      margin-bottom: 70px;
     }
   }
 
   &--cat-data {
-    padding: 0;
-    margin-bottom: 27px;
+    padding-bottom: 22px;
 
     @media (#{$screen-tablet}) {
-      margin-bottom: 72px;
+      margin-bottom: 49px;
     }
 
     @media (#{$screen-desktop}) {
@@ -66,9 +81,43 @@
     }
   }
 
-  &--button {
-    padding-top: 9px;
+  &--contacts {
+    margin-bottom: 25px;
 
+    @media (#{$screen-tablet}) {
+      margin-bottom: 64px;
+    }
+
+    @media (#{$screen-desktop}) {
+      margin-bottom: 66px;
+    }
+  }
+
+  &--comment {
+    margin-bottom: 25px;
+
+    @media (#{$screen-tablet}) {
+      margin-bottom: 64px;
+    }
+
+    @media (#{$screen-desktop}) {
+      margin-bottom: 67px;
+    }
+  }
+
+  &--additional {
+    margin-bottom: 28px;
+
+    @media (#{$screen-tablet}) {
+      margin-bottom: 50px;
+    }
+
+    @media (#{$screen-desktop}) {
+      margin-bottom: 58px;
+    }
+  }
+
+  &--button {
     @media (#{$screen-tablet}) {
       padding-bottom: 51px;
     }
@@ -76,12 +125,6 @@
     @media (#{$screen-desktop}) {
       padding: 0;
       margin-bottom: 82px;
-    }
-  }
-
-  &--contacts {
-    @media (#{$screen-desktop}) {
-      padding-bottom: 0;
     }
   }
 }
@@ -98,13 +141,13 @@
       display: grid;
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-row-gap: 32px;
-      grid-column-gap: 61px;
-      padding: 0 40px;
+      grid-row-gap: 39px;
+      grid-column-gap: 38px;
     }
 
     @media (#{$screen-desktop}) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
       grid-column-gap: 45px;
       padding: 0;
     }
@@ -113,17 +156,25 @@
   &--button {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
   }
 }
 
 .form__area {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 11px;
   width: 100%;
   min-width: 280px;
   align-items: center;
+
+  @media (#{$screen-tablet}) {
+    padding-left: 11px;
+    margin-bottom: 19px;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding-left: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -135,18 +186,23 @@
 
     @media (#{$screen-tablet}) {
       @include font (20px, 30px);
-      margin-bottom: 35px;
+      margin-bottom: 17px;
     }
 
     @media (#{$screen-desktop}) {
-      margin-bottom: 50px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &--radio {
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 
   &--checkbox {
     @media (#{$screen-tablet}) {
       margin: 0;
-      margin-bottom: 32px;
       flex-basis: 50%;
 
       &:nth-child(3n),
@@ -167,11 +223,6 @@
     @media (#{$screen-desktop}) {
       flex-basis: calc(50% - 40px);
       margin: 0;
-      margin-bottom: 25px;
-    }
-
-    &:last-child {
-      margin-bottom: 25px;
     }
   }
 }
@@ -200,10 +251,10 @@
 
   &--text {
     border: 1px solid $special-gray;
-    padding: 13px 45px 15px 14px;
+    padding: 13px 45px 15px 10px;
 
     @media (#{$screen-tablet}) {
-      padding: 13px 55px 15px 14px;
+      padding: 10px 55px 11px 20px;
     }
 
     &:hover {
@@ -248,6 +299,7 @@
   &--radio,
   &--checkbox {
     padding-left: 46px;
+    padding-bottom: 15px;
     position: relative;
 
     @media (#{$screen-tablet}) {
@@ -267,7 +319,7 @@
       background-repeat: no-repeat;
 
       @media (#{$screen-tablet}) {
-        top: -12px;
+        top: -10px;
         left: 8px;
       }
     }
@@ -300,15 +352,23 @@
       @media (#{$screen-tablet}) {
         width: 18px;
         height: 18px;
-        top: -1px;
+        top: 1px;
         left: 19px;
       }
     }
   }
 
+  &--radio-advice {
+    padding-bottom: 0;
+  }
+
   &--checkbox {
     padding-bottom: 13px;
-    padding-left: 60px;
+    padding-left: 46px;
+
+    @media (#{$screen-tablet}) {
+      padding-left: 58px;
+    }
 
     &::before {
       border: 1px solid $special-gray;
@@ -341,14 +401,14 @@
     right: 15px;
 
     @media (#{$screen-tablet}) {
-      width: 18px;
-      height: 13px;
-      top: 23px;
-      right: 20px;
+      width: 19px;
+      height: 15px;
+      top: 18px;
+      right: 24px;
     }
 
     @media (#{$screen-desktop}) {
-      top: 23px;
+      right: 19px;
     }
   }
 
@@ -360,12 +420,13 @@
     right: 15px;
 
     @media (#{$screen-tablet}) {
-      top: 19px;
-      right: 20px;
+      top: 16px;
+      right: 22px;
     }
 
     @media (#{$screen-desktop}) {
-      top: 20px;
+      top: 15px;
+      right: 17px;
     }
   }
 }
@@ -376,6 +437,7 @@
 
 .form__checkbox:checked + .form__label--checkbox::before {
   background-image: url("/img/icon-tick.svg");
+  background-size: 20px 20px;
 }
 
 .form__radio:hover + .form__label--radio::before,
@@ -394,13 +456,72 @@
   display: flex;
   position: relative;
   flex-wrap: nowrap;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 
   @media (#{$screen-tablet}) {
     margin-bottom: 76px;
+    padding-left: 9px;
+  }
 
-    &--additional {
-      margin-bottom: 67px;
+  &--comment {
+    margin-bottom: 34px;
+
+    @media (#{$screen-tablet}) {
+      margin-bottom: 76px;
+    }
+  }
+
+  &--additional {
+    margin-bottom: 40px;
+
+    @media (#{$screen-tablet}) {
+      margin-bottom: 68px;
+    }
+
+    @media (#{$screen-desktop}) {
+      margin-bottom: 66px;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: -400px;
+    width: 140%;
+    height: 2px;
+    background-color: $basic-green;
+    z-index: -1;
+
+    @media (#{$screen-tablet}) {
+      display: block;
+      top: 22px;
+    }
+
+    @media (#{$screen-desktop}) {
+      top: 22px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: -246px;
+    width: 140%;
+    height: 2px;
+    background-color: $basic-green;
+    z-index: -1;
+
+    @media (#{$screen-tablet}) {
+      top: 22px;
+      right: -400px;
+    }
+
+    @media (#{$screen-desktop}) {
+      top: 22px;
     }
   }
 }
@@ -411,9 +532,56 @@
   font-family: $special-text;
   margin: 0;
   padding-right: 15px;
+  background-color: $basic-white;
 
   @media (#{$screen-tablet}) {
     @include font (36px, 36px);
+  }
+
+  &--owner {
+    flex-basis: 70%;
+
+    @media (#{$screen-tablet}) {
+      flex-basis: 93%;
+      padding-left: 39px;
+      margin-left: -39px;
+    }
+
+    @media (#{$screen-desktop}) {
+      flex-basis: 48%;
+    }
+  }
+
+  &--comment {
+    flex-basis: 50%;
+
+    @media (#{$screen-tablet}) {
+      flex-basis: 40%;
+      padding-left: 39px;
+      margin-left: -39px;
+    }
+
+    @media (#{$screen-desktop}) {
+      flex-basis: 21%;
+    }
+  }
+
+  &--additional {
+    flex-basis: 55%;
+
+    @media (#{$screen-tablet}) {
+      flex-basis: 46%;
+      padding-left: 39px;
+      margin-left: -39px;
+    }
+
+    @media (#{$screen-desktop}) {
+      flex-basis: 23%;
+    }
+  }
+
+  @media (#{$screen-desktop}) {
+    padding-left: 30px;
   }
 }
 
@@ -423,12 +591,19 @@
   min-height: 150px;
   resize: none;
   border: 1px solid $special-gray;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  padding-left: 15px;
-  padding-right: 12px;
+  padding: 13px 15px 13px 15px;
   outline: none;
   text-transform: uppercase;
+
+  @media (#{$screen-tablet}) {
+    width: 630px;
+    min-height: 174px;
+    padding: 10px 12px 13px 17px;
+  }
+
+  @media (#{$screen-desktop}) {
+    width: 100%;
+  }
 
   &:hover {
     border-color: $basic-gray-2;
@@ -462,17 +637,16 @@
 
   @media (#{$screen-tablet}) {
     @include font (20px, 20px);
-    min-height: 52px;
-    flex-basis: calc(50% - 30px);
-    padding: 13px 45px;
+    flex-basis: calc(50% - 42px);
+    padding: 16px 22px;
     margin-right: 60px;
+    margin-left: 11px;
   }
 
   @media (#{$screen-desktop}) {
-    flex-basis: calc(50% - 41px);
-    padding: 13px 188px;
-    margin: 0;
-    margin-right: 81px;
+    flex-basis: calc(50% - 40px);
+    padding: 16px 20px;
+    margin: 0 80px 0 0;
   }
 }
 
@@ -485,12 +659,17 @@
   margin-bottom: 12px;
 
   @media (#{$screen-tablet}) {
-    flex-basis: calc(50% - 30px);
+    @include font (16px, 16px);
+    padding-top: 16px;
+    padding-left: 1px;
     text-align: start;
+    margin: 0;
+    flex-basis: calc(50% - 40px);
   }
 
   @media (#{$screen-tablet}) {
     margin: 0;
     flex-basis: calc(50% - 40px);
+    padding-top: 18px;
   }
 }

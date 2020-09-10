@@ -1,15 +1,14 @@
 .button {
+  @include font (16px, 18px);
+  font-family: $special-text;
+  text-transform: uppercase;
+  text-align: center;
   display: block;
-  padding: 10px 40px;
+  padding: 11px 40px;
   border: none;
   color: $basic-white;
   background-color: transparent;
   cursor: pointer;
-  font-family: $special-text;
-  @include font (16px, 18px);
-  text-transform: uppercase;
-  max-height: 40px;
-  text-align: center;
   z-index: 1;
 
   &--primary {

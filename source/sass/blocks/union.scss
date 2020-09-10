@@ -1,9 +1,79 @@
 .union {
+  position: relative;
+
   @media (#{$screen-desktop}) {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 40px;
     padding-bottom: 86px;
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: -400px;
+    width: 140%;
+    height: 2px;
+    background-color: $basic-green;
+    z-index: -1;
+
+    @media (#{$screen-tablet}) {
+      display: block;
+      top: 22px;
+    }
+
+    @media (#{$screen-desktop}) {
+      top: 63px;
+      left: -1370px;
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: -246px;
+    width: 140%;
+    height: 2px;
+    background-color: $basic-green;
+    z-index: -1;
+
+    @media (#{$screen-tablet}) {
+      top: 22px;
+      right: -400px;
+    }
+
+    @media (#{$screen-desktop}) {
+      top: 63px;
+      right: -1059px;
+    }
+  }
+}
+
+.union__title {
+  @include font (24px, 24px);
+  width: 247px;
+  margin: 0;
+  font-weight: normal;
+  font-family: $special-text;
+  padding-bottom: 35px;
+  background-color: $basic-white;
+
+  @media (#{$screen-tablet}) {
+    @include font (36px, 36px);
+    width: 411px;
+    padding: 0;
+    padding-left: 37px;
+    margin-bottom: 81px;
+  }
+
+  @media (#{$screen-desktop}) {
+    width: 373px;
+    padding: 0;
   }
 }
