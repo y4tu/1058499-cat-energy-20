@@ -5,15 +5,14 @@
   color: $basic-white;
 
   @media (#{$screen-tablet}) {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 67px;
+    padding-bottom: 76px;
   }
 
   @media (#{$screen-desktop}) {
     width: 245px;
     height: 100%;
     padding: 0;
-    margin-top: 118px;
   }
 }
 
@@ -23,6 +22,7 @@
   background-image: url("/img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   text-align: center;
 
   @media (#{$screen-retina}) {
@@ -55,6 +55,11 @@
     height: 64px;
     top: 57px;
     left: 111px;
+
+    @media (#{$screen-tablet}) {
+      top: 63px;
+      left: 89px;
+    }
 
     @media (#{$screen-desktop}) {
       top: 63px;

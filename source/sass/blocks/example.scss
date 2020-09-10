@@ -1,20 +1,23 @@
 .example {
   background-color: $special-gray-3;
-  padding-top: 30px;
+  padding-top: 27px;
   padding-bottom: 36px;
 
   @media (#{$screen-tablet}) {
     padding-top: 43px;
-    padding-bottom: 67px;
+    padding-bottom: 8px;
     border-top: 1px solid $special-gray-6;
     background: linear-gradient(to bottom, $basic-white 619px, $special-gray-3 619px);
   }
 
   @media (#{$screen-desktop}) {
-    padding-top: 34px;
-    padding-bottom: 67px;
+    padding-top: 31px;
+    padding-bottom: 0;
+    margin-bottom: -48px;
     border: none;
-    background: linear-gradient(to bottom, $basic-white 136px, $basic-gray 136px);
+    background:
+      linear-gradient(to bottom, $basic-white 168px, transparent 168px),
+      linear-gradient(to right, $basic-gray 72.57%, $special-gray-3 72.57%);
   }
 }
 
@@ -40,8 +43,7 @@
 
   @media (#{$screen-desktop}) {
     max-width: 768px;
-    margin: 0;
-    padding-bottom: 76px;
+    margin: 0 0 147px;
     flex-basis: 100%;
   }
 }
@@ -50,14 +52,13 @@
   margin-bottom: 42px;
 
   @media (#{$screen-tablet}) {
-    margin-bottom: 64px;
+    margin-bottom: 90px;
   }
 
   @media (#{$screen-desktop}) {
     flex-basis: calc(50% - 40px);
     max-width: 570px;
     margin: 0;
-    padding-top: 70px;
   }
 }
 
@@ -66,13 +67,16 @@
   margin: 0;
   font-style: $basic-text;
   margin-bottom: 25px;
+  width: 95%;
 
   @media (#{$screen-tablet}) {
     @include font (16px, 24px);
+    width: 100%;
+    margin-bottom: 54px;
   }
 
   @media (#{$screen-desktop}) {
-    width: 470px;
+    width: 439px;
     margin-bottom: 69px;
   }
 }

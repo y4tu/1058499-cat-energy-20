@@ -1,6 +1,15 @@
 .about {
   text-align: start;
-  padding-bottom: 35px;
+  padding-bottom: 46px;
+
+  @media (#{$screen-tablet}) {
+    padding-bottom: 0;
+    margin-bottom: 9px;
+  }
+
+  @media (#{$screen-desktop}) {
+    margin-bottom: 0;
+  }
 }
 
 .about__title {
@@ -8,7 +17,7 @@
   margin: 0;
   font-family: $special-text;
   font-weight: normal;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 
   @media (#{$screen-tablet}) {
     @include font (60px, 60px);
@@ -29,7 +38,7 @@
   @media (#{$screen-tablet}) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: space-between;
   }
 
   @media (#{$screen-desktop}) {
@@ -42,22 +51,20 @@
 .about__item {
   display: block;
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   padding-left: 80px;
   min-height: 54px;
 
   @media (#{$screen-tablet}) {
     background-repeat: no-repeat;
     background-position: right bottom;
-    margin: 0;
-    padding: 0;
-    padding-top: 151px;
-    padding-bottom: 57px;
-    flex-basis: 50%;
+    margin: 0 0 35px;
+    padding: 188px 0 57px;
+    flex-basis: 46%;
   }
 
   @media (#{$screen-desktop}) {
-    flex-basis: 25%;
+    flex-basis: 20%;
     margin-right: 0;
   }
 
@@ -84,14 +91,14 @@
     content: "";
     background-color: $basic-green;
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     width: 60px;
     height: 60px;
 
     @media (#{$screen-tablet}) {
       top: 40px;
-      width: 80px;
+      width: 82px;
       height: 80px;
     }
   }
@@ -100,9 +107,16 @@
     &::after {
       background-image: url("/img/advantage-leaf@1x.png");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position-x: 7px;
+      background-position-y: 5px;
+      background-size: 49px 49px;
 
-      @media (#{$screen-retina}) {
+      @media (#{$screen-tablet}) {
+        background-position-x: 15px;
+        background-position-y: 15px;
+      }
+
+    @media (#{$screen-retina}) {
         background-image: url("/img/advantage-leaf@2x.png");
       }
     }
@@ -112,7 +126,14 @@
     &::after {
       background-image: url("/img/advantage-powder@1x.png");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position-x: 6px;
+      background-position-y: 4px;
+      background-size: 49px 50px;
+
+      @media (#{$screen-tablet}) {
+        background-position-x: 17px;
+        background-position-y: 15px;
+      }
 
       @media (#{$screen-retina}) {
         background-image: url("/img/advantage-powder@2x.png");
@@ -124,7 +145,14 @@
     &::after {
       background-image: url("/img/advantage-dining@1x.png");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position-x: 8px;
+      background-position-y: 4px;
+      background-size: 40px 50px;
+
+      @media (#{$screen-tablet}) {
+        background-position-x: 20px;
+        background-position-y: 15px;
+      }
 
       @media (#{$screen-retina}) {
         background-image: url("/img/advantage-dining@2x.png");
@@ -136,7 +164,14 @@
     &::after {
       background-image: url("/img/advantage-clock@1x.png");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position-x: 5px;
+      background-position-y: 4px;
+      background-size: 50px 50px;
+
+      @media (#{$screen-tablet}) {
+        background-position-x: 17px;
+        background-position-y: 14px;
+      }
 
       @media (#{$screen-retina}) {
         background-image: url("/img/advantage-clock@2x.png");
@@ -155,6 +190,7 @@
   &--leaf {
     @media (#{$screen-tablet}) {
       width: 201px;
+      margin-top: -35px;
     }
 
     @media (#{$screen-desktop}) {
@@ -165,6 +201,7 @@
   &--powder {
     @media (#{$screen-tablet}) {
       width: 227px;
+      margin-top: -35px;
     }
 
     @media (#{$screen-desktop}) {
@@ -175,20 +212,24 @@
   &--dining {
     @media (#{$screen-tablet}) {
       width: 209px;
+      margin-top: -35px;
     }
 
     @media (#{$screen-desktop}) {
       width: 248px;
+      margin-left: 2px;
     }
   }
 
   &--clock {
     @media (#{$screen-tablet}) {
       width: 245px;
+      margin-top: -35px;
     }
 
     @media (#{$screen-desktop}) {
       width: 250px;
+      margin-left: -4px;
     }
   }
 }

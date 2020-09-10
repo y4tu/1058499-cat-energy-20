@@ -46,15 +46,35 @@
 .footer__content {
   @media (#{$screen-tablet}) {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-top: 55px;
-    padding-bottom: 61px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  &--catalog {
+    padding-bottom: 14px;
+
+    @media (#{$screen-tablet}) {
+      padding-top: 39px;
+      padding-bottom: 51px;
+    }
+
+    @media (#{$screen-desktop}) {
+      padding-bottom: 49px;
+    }
   }
 }
 
 .footer__logo {
   text-align: center;
+
+  @media (#{$screen-tablet}) {
+    margin-right: 152px;
+  }
+
+  @media (#{$screen-desktop}) {
+    margin-right: 408px;
+  }
 
   &:hover,
   &:focus {
@@ -68,9 +88,22 @@
 
 .footer__socials {
   width: 100%;
+  margin-bottom: 14px;
 
   @media (#{$screen-tablet}) {
-    width: 129px;
+    width: 130px;
+    margin-right: 134px;
+    padding-top: 10px;
+  }
+
+  @media (#{$screen-desktop}) {
+    margin-right: 392px;
+  }
+
+  &--catalog {
+    @media (#{$screen-tablet}) {
+      padding-top: 19px;
+    }
   }
 }
 
@@ -85,10 +118,9 @@
 .footer__link {
   margin: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 22px 0;
+  padding: 0;
   font-family: $basic-text;
   font-size: 16px;
   color: $special-dark-gray;
@@ -108,8 +140,9 @@
 }
 
 .footer__svg {
-  display: block;
-  width: 27px;
-  height: 34px;
+  width: 41px;
+  height: 50px;
   fill: $special-gray-2;
+  margin-left: auto;
+  margin-right: -7px;
 }

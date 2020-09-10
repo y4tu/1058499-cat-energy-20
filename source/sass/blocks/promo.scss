@@ -4,10 +4,11 @@
 
   @media (#{$screen-tablet}) {
     color: $basic-black;
+    padding-bottom: 19px;
   }
 
   @media (#{$screen-desktop}) {
-    padding-top: 24px;
+    padding-top: 64px;
   }
 }
 
@@ -33,29 +34,39 @@
 
 .promo__item {
   text-align: center;
-  margin-top: -105px;
+  margin-top: -140px;
+
+  @media (#{$screen-tablet}) {
+    margin-top: -105px;
+  }
 
   @media (#{$screen-desktop}) {
-    margin-top: -347px;
+    margin-top: -387px;
+    margin-bottom: -82px;
   }
 }
 
 .promo__title {
   @include font (36px, 36px);
   width: 249px;
-  margin: 0 auto;
   font-weight: normal;
   font-family: $special-text;
-  padding-bottom: 25px;
   text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0 auto 25px;
 
   @media (#{$screen-tablet}) {
     @include font (60px, 60px);
     width: 414px;
-    margin-left: 82px;
-    margin-bottom: 41px;
+    margin-left: 87px;
+    margin-bottom: 42px;
     padding: 0;
     text-align: start;
+  }
+
+  @media (#{$screen-desktop}) {
+    margin-left: 80px;
   }
 }
 
@@ -71,17 +82,22 @@
   @media (#{$screen-tablet}) {
     @include font (20px);
     width: 283px;
-    margin-left: 82px;
+    margin-left: 88px;
     text-align: start;
+  }
+
+  @media (#{$screen-desktop}) {
+    margin-left: 80px;
   }
 }
 
 .promo__image {
   display: flex;
   justify-content: center;
+  margin-bottom: 3px;
 
   @media (#{$screen-tablet}) {
-    padding-left: 20px;
+    margin-bottom: 0;
   }
 
   @media (#{$screen-desktop}) {
@@ -90,18 +106,21 @@
 }
 
 .promo__button {
+  @include font (14px, 18px);
+
   @media (#{$screen-tablet}) {
     @include font (20px, 20px);
-    margin-top: -475px;
-    margin-bottom: 475px;
+    margin-top: -578px;
+    margin-bottom: 507px;
     margin-left: 82px;
     position: relative;
-    padding: 14px 26px;
+    padding: 17px 26px;
     max-height: none;
-    width: fit-content;
+    width: 244px;
   }
 
   @media (#{$screen-desktop}) {
-    margin-top: -226px;
+    margin-top: -185px;
+    margin-left: 80px;
   }
 }

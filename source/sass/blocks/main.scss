@@ -1,9 +1,5 @@
 .main {
-  @media (#{$screen-tablet}) {
-    padding-top: 40px;
-  }
-
-  @media (#{$screen-desktop}) {
-    padding-top: 49px;
+  &--lines{
+    overflow: hidden;
   }
 }

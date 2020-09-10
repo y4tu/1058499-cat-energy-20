@@ -3,10 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 21px;
-  padding-left: 73px;
-  padding-right: 77px;
+  padding: 23px 84px 21px 73px;
   border-top: 1px solid $special-gray-4;
   border-bottom: 1px solid $special-gray-4;
 
@@ -22,18 +19,33 @@
   fill: $special-gray-2;
 
   &--vk {
-    width: 29px;
-    height: 17px;
+    width: 23px;
+    height: 16px;
+
+    @media (#{$screen-tablet}) {
+      width: 29px;
+      height: 17px;
+    }
   }
 
   &--insta {
-    width: 23px;
-    height: 23px;
+    width: 16px;
+    height: 16px;
+
+    @media (#{$screen-tablet}) {
+      width: 23px;
+      height: 23px;
+    }
   }
 
   &--fb {
-    width: 13px;
-    height: 27px;
+    width: 10px;
+    height: 18px;
+
+    @media (#{$screen-tablet}) {
+      width: 13px;
+      height: 27px;
+    }
   }
 
   &:hover,

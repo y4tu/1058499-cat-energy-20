@@ -15,6 +15,12 @@
   }
 }
 
+.additional__inner {
+  @media (#{$screen-desktop}) {
+  display: flex;
+}
+}
+
 .additional__list {
   @include list-reset;
 
@@ -40,9 +46,8 @@
   }
 
   @media (#{$screen-desktop}) {
-    padding: 0;
-    padding-top: 15px;
-    padding-bottom: 17px;
+    align-items: center;
+    padding: 15px 0 16px;
     display: flex;
     border: none;
     border-top: 1px solid $basic-gray;
@@ -54,11 +59,12 @@
 }
 
 .additional__content {
+  margin-bottom: -2px;
 
   @media (#{$screen-tablet}) {
     display: flex;
     width: 100%;
-    margin-bottom: 28px;
+    margin-bottom: 9px;
   }
 
   @media (#{$screen-desktop}) {
@@ -77,16 +83,19 @@
 
   @media (#{$screen-tablet}) {
     @include font (20px, 20px);
+    margin-right: 161px;
   }
 
   @media (#{$screen-desktop}) {
     margin: 0;
+    margin-right: 37px;
     padding: 0;
   }
 }
 
 .additional__text {
   @include list-reset;
+  @include font (14px, 14px);
   font-family: $basic-text;
   display: flex;
   flex-basis: 50%;
@@ -112,6 +121,7 @@
 
   @media (#{$screen-desktop}) {
     text-align: start;
+    padding-top: 5px;
   }
 }
 
@@ -119,6 +129,10 @@
   @include list-reset;
   flex-basis: 40%;
   text-align: end;
+
+  @media (#{$screen-desktop}) {
+    padding-top: 5px;
+  }
 }
 
 .additional__button {
@@ -128,7 +142,7 @@
   flex-basis: 100%;
 
   @media (#{$screen-desktop}) {
-    flex-basis: 30%;
-    margin-left: 40px;
+    flex-basis: 36%;
+    margin-left: 38px;
   }
 }
