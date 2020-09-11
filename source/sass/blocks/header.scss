@@ -58,6 +58,7 @@
 
 .header__logo {
   width: 190px;
+
   @media (#{$screen-tablet}) {
     flex-basis: 82%;
   }

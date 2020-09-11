@@ -82,12 +82,12 @@
 }
 
 .gift__text {
+  @include font (16px, 20px);
   width: 161px;
   margin: 0 auto;
   padding-top: 186px;
   padding-bottom: 43px;
   font-family: $basic-text;
-  @include font (16px, 20px);
   text-align: center;
 
   @media (#{$screen-tablet}) {

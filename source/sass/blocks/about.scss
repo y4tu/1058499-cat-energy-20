@@ -116,7 +116,7 @@
         background-position-y: 15px;
       }
 
-    @media (#{$screen-retina}) {
+      @media (#{$screen-retina}) {
         background-image: url("/img/advantage-leaf@2x.png");
       }
     }
@@ -183,6 +183,7 @@
 .about__item-wrapper {
   display: block;
   position: relative;
+
   @media (#{$screen-tablet}) {
     @include font(16px, 24px);
   }
