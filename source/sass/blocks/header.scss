@@ -24,6 +24,12 @@
       padding-top: 53px;
     }
   }
+
+  &--form {
+    @media (#{$screen-tablet}) {
+      padding-top: 25px;
+    }
+  }
 }
 
 .header__item {
@@ -49,7 +55,7 @@
   }
 
   @media (#{$screen-desktop}) {
-    margin: 0 509px 0 0;
+    margin: 0 auto 0 0;
     padding: 0;
     width: 235px;
     height: 59px;
