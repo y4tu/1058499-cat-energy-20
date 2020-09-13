@@ -47,13 +47,15 @@
       height: 27px;
     }
   }
+}
 
-  &:hover,
-  &:focus {
+.socials__link {
+  &:focus .socials__svg,
+  &:hover .socials__svg {
     fill: $basic-green;
   }
 
-  &:active {
+  &:active .socials__svg {
     opacity: 0.3;
   }
 }

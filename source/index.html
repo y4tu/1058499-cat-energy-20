@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
@@ -55,12 +57,15 @@
           <div class="promo__item">
             <div class="promo__image">
               <picture class="promo__picture">
+                <source srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x" media="(min-width: 1440px)">
+                <source srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x" media="(min-width: 768px)">
+                <source srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x" media="(min-width: 320px)">
                 <source srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" media="(min-width: 1440px)">
                 <source srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
                 <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Изображение корма Cat Energy Pro Курица">
               </picture>
             </div>
-            <a href="#" class="promo__button button button--primary">
+            <a href="form.html" class="promo__button button button--primary">
               Подобрать программу
             </a>
           </div>
@@ -75,7 +80,7 @@
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
               поможет вашему питомцу сбросить лишний вес.
             </p>
-            <a href="#" class="programs__link">
+            <a href="catalog.html" class="programs__link">
               Каталог slim
             </a>
           </div>
@@ -87,7 +92,7 @@
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
               необходимые мышцы!
             </p>
-            <a href="#" class="programs__link">
+            <a href="catalog.html" class="programs__link">
               Каталог pro
             </a>
           </div>
@@ -163,6 +168,12 @@
             <div class="slider__image">
               <div class="slider__before slider__active">
                 <picture class="slider__picture">
+                  <source srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x"
+                          media="(min-width: 1440px)">
+                  <source srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x"
+                          media="(min-width: 768px)">
+                  <source srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x"
+                          media="(min-width: 320px)">
                   <source srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x"
                           media="(min-width: 1440px)">
                   <source srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x"
@@ -172,6 +183,10 @@
               </div>
               <div class="slider__after">
                 <picture class="slider__picture">
+                  <source srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x"
+                          media="(min-width: 1440px)">
+                  <source srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x" media="(min-width: 768px)">
+                  <source srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x" media="(min-width: 320px)">
                   <source srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x"
                           media="(min-width: 1440px)">
                   <source srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x" media="(min-width: 768px)">
@@ -198,7 +213,7 @@
     </main>
 
   <footer class="page__footer footer">
-    <div class="footer__inner">
+    <div class="footer__inner footer__inner--index">
       <div class="footer__contacts contacts contacts--index container">
         <h2 class="contacts__title">
           Приглашаем к&nbsp;сотрудничеству дилеров!
@@ -252,7 +267,7 @@
           <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">
             HTML Academy
             <svg width="27" height="34" class="footer__svg">
-              <use xlink:href="img/sprite.svg#htmlacademy"></use>
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>

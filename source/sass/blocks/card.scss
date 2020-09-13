@@ -112,6 +112,17 @@
   width: 100%;
   height: 100%;
   color: $special-dark-gray-2;
+
+  &--name {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .card__img {

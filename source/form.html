@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
-  <header class="page__header header container">
+  <header class="page__header header header--form container">
     <div class="header__item">
       <div class="header__logo logo">
         <a href="index.html" class="logo__link">
@@ -131,7 +133,7 @@
               </h2>
             </div>
             <div class="form__area">
-              <label for="textarea" class="form__label form__label--textarea">
+              <label for="textarea" class="form__label form__label--textarea" aria-label="Введите комментарий">
                 <textarea class="form__textarea" id="textarea" cols="45" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
               </label>
             </div>

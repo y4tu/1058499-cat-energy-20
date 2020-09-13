@@ -8,6 +8,7 @@
 
   @media (#{$screen-tablet}) {
     @include font (60px, 60px);
+    margin: 0;
     margin-bottom: 54px;
   }
 
@@ -38,7 +39,6 @@
 
 .form__fieldset {
   @include fieldset-reset;
-  //overflow: hidden;
 
   @media (#{$screen-tablet}) {
     padding: 0 30px;
@@ -57,13 +57,13 @@
     @media (#{$screen-tablet}) {
       border: 1px solid $special-gray-6;
       width: 630px;
-      margin: 0 0 77px 41px;
-      padding: 36px 17px 34px 8px;
+      margin: 0 0 74px 41px;
+      padding: 36px 17px 19px 8px;
     }
 
     @media (#{$screen-desktop}) {
       flex-basis: calc(50% - 40px);
-      padding: 34px 19px;
+      padding: 33px 19px 0 19px;
       margin-bottom: 70px;
     }
   }
@@ -89,7 +89,7 @@
     }
 
     @media (#{$screen-desktop}) {
-      margin-bottom: 66px;
+      margin-bottom: 56px;
     }
   }
 
@@ -97,7 +97,7 @@
     margin-bottom: 25px;
 
     @media (#{$screen-tablet}) {
-      margin-bottom: 64px;
+      margin-bottom: 63px;
     }
 
     @media (#{$screen-desktop}) {
@@ -196,14 +196,19 @@
 
   &--radio {
     &:last-child {
-      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    @media (#{$screen-desktop}) {
+      margin-bottom: 0;
     }
   }
 
   &--checkbox {
     @media (#{$screen-tablet}) {
+      width: 280px;
       margin: 0;
-      flex-basis: 50%;
+      align-items: baseline;
 
       &:nth-child(3n),
       &:nth-child(4n) {
@@ -212,7 +217,7 @@
     }
 
     @media (#{$screen-desktop}) {
-      flex-basis: 25%;
+      width: 270px;
       margin: 0;
     }
   }
@@ -220,9 +225,17 @@
   &--contacts {
     position: relative;
 
+    @media (#{$screen-tablet}) {
+      margin: 0 0 20px 0;
+    }
+
     @media (#{$screen-desktop}) {
       flex-basis: calc(50% - 40px);
-      margin: 0;
+      margin: 0 0 10px 0;
+
+      &:last-child {
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -269,7 +282,6 @@
     &:focus + .form__svg {
       fill: $basic-green;
     }
-
   }
 
   @media (#{$screen-tablet}) {
@@ -326,6 +338,10 @@
   }
 
   &--radio {
+    @media (#{$screen-desktop}) {
+      padding-bottom: 33px;
+    }
+
     &::before {
       border-radius: 50%;
       border: 1px solid $special-gray;
@@ -358,16 +374,14 @@
     }
   }
 
-  &--radio-advice {
-    padding-bottom: 0;
-  }
-
   &--checkbox {
     padding-bottom: 13px;
     padding-left: 46px;
 
     @media (#{$screen-tablet}) {
+      width: 270px;
       padding-left: 58px;
+      white-space: normal;
     }
 
     &::before {
@@ -596,6 +610,10 @@
   text-transform: uppercase;
 
   @media (#{$screen-tablet}) {
+    @include font (20px, 30px);
+    color: $special-dark-gray;
+    font-family: $special-text;
+    text-transform: uppercase;
     width: 630px;
     min-height: 174px;
     padding: 10px 12px 13px 17px;
@@ -619,6 +637,7 @@
     font-family: $special-text;
     text-transform: uppercase;
     color: $special-dark-gray;
+    padding: 0;
 
     @media (#{$screen-tablet}) {
       @include font (20px, 30px);

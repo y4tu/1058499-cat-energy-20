@@ -7,7 +7,6 @@
 
   &--index {
     padding-top: 17px;
-    background-color: $basic-white;
   }
 
   &--catalog {
@@ -18,7 +17,7 @@
   @media (#{$screen-tablet}) {
     align-items: end;
     padding: 64px 71px 57px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   @media (#{$screen-desktop}) {

@@ -17,8 +17,8 @@
 
 .additional__inner {
   @media (#{$screen-desktop}) {
-  display: flex;
-}
+    display: flex;
+  }
 }
 
 .additional__list {
@@ -73,11 +73,11 @@
 }
 
 .additional__subtitle {
+  @include font (16px, 16px);
   margin: 0;
   font-weight: normal;
   flex-basis: 50%;
   font-family: $special-text;
-  @include font (16px, 16px);
   text-transform: uppercase;
   padding-bottom: 13px;
 

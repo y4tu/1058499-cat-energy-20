@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: -177px;
-    margin-bottom: 71px;
+    margin-bottom: 51px;
   }
 }
 
@@ -37,9 +37,10 @@
     width: 570px;
     margin: 0;
     margin-right: 80px;
+    margin-bottom: 20px;
     padding: 77px 51px 59px;
 
-    &:last-child {
+    &:nth-child(even) {
       margin-right: 0;
     }
   }
@@ -218,5 +219,16 @@
       top: 10px;
       left: 135px;
     }
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-image: url("/img/icon-right-arrow-verylong.svg");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
