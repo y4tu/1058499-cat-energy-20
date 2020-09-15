@@ -11,12 +11,12 @@
   }
 
   @media (#{$screen-desktop}) {
-    padding-top: 31px;
+    padding-top: 21px;
     padding-bottom: 0;
     margin-bottom: -48px;
     border: none;
     background:
-      linear-gradient(to bottom, $basic-white 168px, transparent 168px),
+      linear-gradient(to bottom, $basic-white 157px, transparent 157px),
       linear-gradient(to right, $basic-gray calc(50vw + 325px), $special-gray-3 calc(50vw + 325px));
   }
 }
