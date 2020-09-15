@@ -3,14 +3,14 @@
 
   @media (#{$screen-tablet}) {
     padding-bottom: 0;
-    margin-bottom: 71px;
+    margin-bottom: 45px;
   }
 
   @media (#{$screen-desktop}) {
     display: flex;
     flex-wrap: wrap;
     margin-top: -177px;
-    margin-bottom: 51px;
+    margin-bottom: 70px;
   }
 }
 
