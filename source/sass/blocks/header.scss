@@ -11,7 +11,7 @@
 
   @media (#{$screen-desktop}) {
     padding-top: 49px;
-    margin-bottom: 51px;
+    margin-bottom: 78px;
   }
 
   &--catalog {
@@ -50,15 +50,15 @@
   @media (#{$screen-tablet}) {
     margin: 0;
     padding: 0;
-    width: 190px;
+    width: 175px;
     height: auto;
   }
 
   @media (#{$screen-desktop}) {
     margin: 0 auto 0 0;
     padding: 0;
-    width: 235px;
-    height: 59px;
+    width: 202px;
+    height: 60px;
   }
 }
 
@@ -66,7 +66,7 @@
   width: 190px;
 
   @media (#{$screen-tablet}) {
-    flex-basis: 82%;
+    width: 100%;
   }
 
   @media (#{$screen-desktop}) {

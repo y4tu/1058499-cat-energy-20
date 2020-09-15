@@ -173,22 +173,27 @@
 }
 
 .slider__button {
+  border: none;
+  background: none;
   color: $basic-black;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
 
   @media (#{$screen-tablet}) {
     border-bottom: 1px dotted rgba(136, 136, 136, 0.4);
-    margin-right: 6px;
-    margin-left: 5px;
   }
 
   &:hover,
   &:focus {
-    @media (#{$screen-tablet}) {
-      border-bottom: 1px solid rgba(145, 145, 145, 0.4);
-    }
+    border-bottom: 1px solid rgba(145, 145, 145, 0.4);
   }
 
   &:active {
     border: none;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding: 0 4px 0 7px;
   }
 }

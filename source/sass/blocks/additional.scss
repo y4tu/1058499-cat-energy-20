@@ -97,6 +97,7 @@
   @include list-reset;
   @include font (14px, 14px);
   font-family: $basic-text;
+  color: $special-dark-gray;
   display: flex;
   flex-basis: 50%;
   padding-bottom: 15px;

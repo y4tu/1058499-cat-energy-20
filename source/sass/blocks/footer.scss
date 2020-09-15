@@ -18,7 +18,7 @@
 
 .footer__map {
   width: 100%;
-  height: 100%;
+  height: 362px;
   margin: 0 auto;
   background-image: url("/img/bg-map-mobile@1x.png");
   background-position: center;
@@ -56,9 +56,8 @@
 .footer__content {
   @media (#{$screen-tablet}) {
     display: flex;
-    align-items: center;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 42px;
+    padding-bottom: 41px;
   }
 
   &--catalog {
@@ -79,6 +78,7 @@
   text-align: center;
 
   @media (#{$screen-tablet}) {
+    padding-top: 15px;
     margin-right: 152px;
   }
 
@@ -130,7 +130,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0;
+  padding: 0 0 14px;
   font-family: $basic-text;
   font-size: 16px;
   color: $special-dark-gray;
@@ -146,6 +146,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding: 10px 0 0 0;
   }
 }
 

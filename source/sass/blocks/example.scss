@@ -1,7 +1,7 @@
 .example {
   background-color: $special-gray-3;
   padding-top: 27px;
-  padding-bottom: 36px;
+  padding-bottom: 28px;
 
   @media (#{$screen-tablet}) {
     padding-top: 43px;
@@ -64,6 +64,7 @@
 
 .example__text {
   @include font (14px, 18px);
+  color: $special-dark-gray;
   margin: 0;
   font-style: $basic-text;
   margin-bottom: 25px;

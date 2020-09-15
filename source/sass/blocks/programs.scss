@@ -35,9 +35,7 @@
 
   @media (#{$screen-desktop}) {
     width: 570px;
-    margin: 0;
-    margin-right: 80px;
-    margin-bottom: 20px;
+    margin: 0 auto 0 0;
     padding: 77px 51px 59px;
 
     &:nth-child(even) {
