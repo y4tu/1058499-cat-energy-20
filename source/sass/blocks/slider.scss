@@ -184,6 +184,7 @@
 
   @media (#{$screen-tablet}) {
     border-bottom: 1px dotted rgba(136, 136, 136, 0.4);
+    padding: 0 5px 0;
   }
 
   &:hover,

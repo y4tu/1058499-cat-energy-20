@@ -183,7 +183,6 @@
 .about__item-wrapper {
   display: block;
   position: relative;
-  color: $special-dark-gray;
 
   @media (#{$screen-tablet}) {
     @include font(16px, 24px);
