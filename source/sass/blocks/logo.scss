@@ -1,5 +1,15 @@
 .logo__link {
   display: block;
+  text-align: center;
+
+  @media (#{$screen-tablet}) {
+    padding-top: 15px;
+    margin-right: 152px;
+  }
+
+  @media (#{$screen-desktop}) {
+    margin-right: 408px;
+  }
 
   &--footer {
     width: 128px;
@@ -8,8 +18,8 @@
     padding-bottom: 32px;
 
     @media (#{$screen-tablet}) {
-      margin: 0;
-      padding: 5px 0;
+      padding: 19px 0;
+      margin: 0 auto 0 0;
     }
   }
 

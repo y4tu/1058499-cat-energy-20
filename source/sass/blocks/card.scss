@@ -17,11 +17,6 @@
       background-color: transparent;
     }
   }
-
-  @media (#{$screen-desktop}) {
-    width: 245px;
-    height: 431px;
-  }
 }
 
 .card__inner {
@@ -38,7 +33,7 @@
 
   @media (#{$screen-desktop}) {
     min-width: 245px;
-    padding: 0 35px 30px;
+    padding: 0 35px 30px 40px;
   }
 
   &--more {
@@ -107,7 +102,7 @@
     }
 
     @media (#{$screen-desktop}) {
-      margin-top: 26px;
+      margin-top: 51px;
     }
   }
 }
@@ -121,7 +116,7 @@
   &--name {
     &:hover,
     &:focus {
-      opacity: 0.6;
+      opacity: 0.8;
     }
 
     &:active {
@@ -211,7 +206,6 @@
 .card__item {
   display: flex;
   justify-content: space-between;
-  color: $special-dark-gray;
 
   @media (#{$screen-tablet}) {
     padding-top: 8px;
@@ -219,9 +213,5 @@
     border-bottom: 1px solid $basic-gray-2;
 
     @include font (16px, 16px);
-  }
-
-  @media (#{$screen-desktop}) {
-    padding: 8px 5px 7px 5px;
   }
 }
