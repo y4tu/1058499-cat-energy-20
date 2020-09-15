@@ -56,7 +56,7 @@
 .footer__content {
   @media (#{$screen-tablet}) {
     display: flex;
-    padding-top: 42px;
+    padding-top: 41px;
     padding-bottom: 41px;
   }
 
@@ -69,7 +69,14 @@
     }
 
     @media (#{$screen-desktop}) {
-      padding-bottom: 49px;
+      padding-top: 41px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &--form {
+    @media (#{$screen-desktop}) {
+      padding-bottom: 47px;
     }
   }
 }
@@ -134,6 +141,14 @@
   font-family: $basic-text;
   font-size: 16px;
   color: $special-dark-gray;
+
+  &--catalog {
+    padding: 0;
+
+    @media (#{$screen-tablet}) {
+      padding-top: 5px;
+    }
+  }
 
   @media (#{$screen-tablet}) {
     width: 163px;

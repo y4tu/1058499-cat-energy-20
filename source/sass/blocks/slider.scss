@@ -24,8 +24,8 @@
   @media (#{$screen-tablet}) {
     width: 100%;
     height: 545px;
-    margin-left: 16px;
-    margin-bottom: -14px;
+    margin-left: 7px;
+    margin-bottom: -5px;
   }
 
   @media (#{$screen-desktop}) {
@@ -33,6 +33,7 @@
     height: 563px;
     margin-top: -77px;
     margin-left: -38px;
+    margin-bottom: -14px;
   }
 }
 
@@ -56,7 +57,7 @@
 
 .slider__before {
   @media (#{$screen-tablet}) {
-    clip: rect(auto 338px auto auto);
+    clip: rect(auto 346px auto auto);
   }
 
   @media (#{$screen-desktop}) {
@@ -66,7 +67,7 @@
 
 .slider__after {
   @media (#{$screen-tablet}) {
-    clip: rect(auto auto auto 338px);
+    clip: rect(auto auto auto 346px);
   }
 
   @media (#{$screen-desktop}) {
@@ -179,6 +180,7 @@
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
+  padding: 0;
 
   @media (#{$screen-tablet}) {
     border-bottom: 1px dotted rgba(136, 136, 136, 0.4);

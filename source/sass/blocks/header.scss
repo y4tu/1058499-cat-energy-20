@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     align-items: center;
     padding-top: 21px;
-    margin-bottom: 64px;
+    margin-bottom: 50px;
   }
 
   @media (#{$screen-desktop}) {
@@ -29,6 +29,10 @@
     @media (#{$screen-tablet}) {
       padding-top: 25px;
     }
+
+    @media (#{$screen-desktop}) {
+      padding-top: 50px;
+    }
   }
 }
 
@@ -44,7 +48,7 @@
   }
 
   &--catalog {
-    padding-top: 14px;
+    padding-top: 12px;
   }
 
   @media (#{$screen-tablet}) {

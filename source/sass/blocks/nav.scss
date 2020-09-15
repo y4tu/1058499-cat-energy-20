@@ -39,7 +39,7 @@
 
   @media (#{$screen-tablet}) {
     border: none;
-    margin-right: 33px;
+    margin-right: 36px;
 
     &:last-child {
       border: none;
@@ -76,7 +76,7 @@
   }
 
   &--index {
-    padding-top: 21px;
+    padding-top: 22px;
 
     @media (#{$screen-desktop}) {
       color: $basic-white;

@@ -5,7 +5,7 @@
 
   @media (#{$screen-tablet}) {
     padding-top: 43px;
-    padding-bottom: 8px;
+    padding-bottom: 18px;
     border-top: 1px solid $special-gray-6;
     background: linear-gradient(to bottom, $basic-white 619px, $special-gray-3 619px);
   }
@@ -52,7 +52,7 @@
   margin-bottom: 42px;
 
   @media (#{$screen-tablet}) {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
   }
 
   @media (#{$screen-desktop}) {
