@@ -51,8 +51,8 @@
   &--radio {
     border-top: 1px solid $basic-gray;
     border-bottom: 1px solid $basic-gray;
-    padding: 24px 20px;
-    margin: 0 -20px 13px;
+    padding: 24px 20px 10px;
+    margin: 0 -20px 27px;
 
     @media (#{$screen-tablet}) {
       border: 1px solid $special-gray-6;
@@ -675,7 +675,7 @@
   font-family: $basic-text;
   display: block;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
 
   @media (#{$screen-tablet}) {
     @include font (16px, 16px);

@@ -174,7 +174,7 @@
 }
 
 .slider__button {
-  border: none;
+  border: 1px solid transparent;
   background: none;
   color: $basic-black;
   text-transform: uppercase;
@@ -193,7 +193,7 @@
   }
 
   &:active {
-    border: none;
+    border: 1px solid transparent;
   }
 
   @media (#{$screen-desktop}) {
